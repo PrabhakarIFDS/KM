@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.Portal" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.Portal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" />
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.Search" />
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:complexType name="PortalProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATREmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRSubject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdminUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationInfo" nillable="true" type="tns:ApplicationInfoMember" />
+      <xs:element minOccurs="0" name="ArticleBodySecurity" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleGroupSecurity" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="EmailKBSystemNotification" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailUserRequestNotification" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAQDisplaySetting" type="tns:FAQDisplayOption" />
+      <xs:element minOccurs="0" name="FileTypes" nillable="true" type="tns:ArrayOfFileTypeMember" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:int" />
+      <xs:element minOccurs="0" name="KeepSessionAlive" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ModulePortal" nillable="true" type="q1:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="PortalArticleDisplay" nillable="true" type="tns:ArticleDisplayMember" />
+      <xs:element minOccurs="0" name="PortalArticleInfo" nillable="true" type="tns:PortalArticleInfoMember" />
+      <xs:element minOccurs="0" name="PortalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortalCreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PortalDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortalDisplayType" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalForumText" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PortalGroup" nillable="true" type="q2:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="PortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalLangID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalLanguages" nillable="true" type="tns:ArrayOfPortalLanguageMember" />
+      <xs:element minOccurs="0" name="PortalLogin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalRating" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" minOccurs="0" name="PortalRegistrationFields" nillable="true" type="q3:ArrayOfPortalSettingField" />
+      <xs:element minOccurs="0" name="PortalReputation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalTitle" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" minOccurs="0" name="PortalType" type="q4:PortalTypes" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" minOccurs="0" name="PortalUserRequestAccount" nillable="true" type="q5:PortalSettingMember" />
+      <xs:element minOccurs="0" name="PortalUserRequestEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalWidgetManagement" nillable="true" type="tns:WidgetManagement" />
+      <xs:element minOccurs="0" name="PortalWikiText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalProperties" nillable="true" type="tns:PortalProperties" />
+  <xs:complexType name="ApplicationInfoMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KBDataPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationInfoMember" nillable="true" type="tns:ApplicationInfoMember" />
+  <xs:simpleType name="FAQDisplayOption">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ListallFAQswithoutanycategories">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ListFAQswithcategoriesin1verticalcolumn">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ListFAQswithcategoriesin2verticalcolumns">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FAQDisplayOption" nillable="true" type="tns:FAQDisplayOption" />
+  <xs:complexType name="ArrayOfFileTypeMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileTypeMember" nillable="true" type="tns:FileTypeMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileTypeMember" nillable="true" type="tns:ArrayOfFileTypeMember" />
+  <xs:complexType name="FileTypeMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileContentHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileExt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="FileTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileTypeMember" nillable="true" type="tns:FileTypeMember" />
+  <xs:complexType name="ArticleDisplayMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alert" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Attribute" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AttributeHeader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileSize" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FileType" type="xs:boolean" />
+      <xs:element minOccurs="0" name="KnowledgeBase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModifyDate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NewAlert" type="xs:int" />
+      <xs:element minOccurs="0" name="UpdateAlert" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleDisplayMember" nillable="true" type="tns:ArticleDisplayMember" />
+  <xs:complexType name="PortalArticleInfoMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleCategorization" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleFavorite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleInfo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleSubscription" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleSuggestion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookmarkArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CopyArticleLink" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentViewNotificationDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DownloadArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EditArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmailArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExternalNotes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HighLight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IncludeArticleContent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsExpand" type="xs:int" />
+      <xs:element minOccurs="0" name="NotificationEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeDocumentNotification" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OfficeDocumentNotificationContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrintArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RateArticle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SocialMedia" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SuggestEmailTemplateBody" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuggestionNotificationEmail" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalArticleInfoMember" nillable="true" type="tns:PortalArticleInfoMember" />
+  <xs:complexType name="ArrayOfPortalLanguageMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PortalLanguageMember" nillable="true" type="tns:PortalLanguageMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortalLanguageMember" nillable="true" type="tns:ArrayOfPortalLanguageMember" />
+  <xs:complexType name="PortalLanguageMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LanguageFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalLanguageMember" nillable="true" type="tns:PortalLanguageMember" />
+  <xs:complexType name="WidgetManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdManager" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="AllKBSearch" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="ArticlesViewed" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="ChatEscalation" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="ContributeKB" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="ContributeWiki" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="CustomMessage" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="HotTopics" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="LatestArticles" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="MostActiveForums" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="MostRecentWikis" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="PortalFeedback" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="RecentSearches" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="TagCloud" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="Top10FAQ" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="TopRatedForums" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="TopRatedWikis" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="TopSearches" nillable="true" type="tns:WidgetManagementMember" />
+      <xs:element minOccurs="0" name="TopViewedWikis" nillable="true" type="tns:WidgetManagementMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WidgetManagement" nillable="true" type="tns:WidgetManagement" />
+  <xs:complexType name="WidgetManagementMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ButtonText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContentText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WidgetManagementMember" nillable="true" type="tns:WidgetManagementMember" />
+  <xs:complexType name="ArrayOfArticleMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleMember" nillable="true" type="tns:ArticleMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleMember" nillable="true" type="tns:ArrayOfArticleMember" />
+  <xs:complexType name="ArticleMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleAttributeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleCategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleFileType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ArticleGroupID" nillable="true" type="q6:ArrayOfint" />
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleSummary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocID" type="xs:int" />
+      <xs:element minOccurs="0" name="FileSize" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KBID" type="xs:int" />
+      <xs:element minOccurs="0" name="KBName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StatusAlert" type="tns:AlertStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleMember" nillable="true" type="tns:ArticleMember" />
+  <xs:simpleType name="AlertStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoAlert" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="New" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AlertStatus" nillable="true" type="tns:AlertStatus" />
+  <xs:complexType name="ArrayOfSearchCloudResultMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchCloudResultMember" nillable="true" type="tns:SearchCloudResultMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchCloudResultMember" nillable="true" type="tns:ArrayOfSearchCloudResultMember" />
+  <xs:complexType name="SearchCloudResultMember">
+    <xs:sequence>
+      <xs:element name="numbersearch" type="xs:int" />
+      <xs:element name="searchterm" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchCloudResultMember" nillable="true" type="tns:SearchCloudResultMember" />
+  <xs:complexType name="ArrayOfSearchTypeMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchTypeMember" nillable="true" type="tns:SearchTypeMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchTypeMember" nillable="true" type="tns:ArrayOfSearchTypeMember" />
+  <xs:complexType name="SearchTypeMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SearchDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SearchTypeId" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/KnowledgeBase.Search" minOccurs="0" name="SearchTypeName" type="q7:SearchMethod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchTypeMember" nillable="true" type="tns:SearchTypeMember" />
+  <xs:complexType name="ArrayOfTagMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TagMember" nillable="true" type="tns:TagMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTagMember" nillable="true" type="tns:ArrayOfTagMember" />
+  <xs:complexType name="TagMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumberArticle" type="xs:int" />
+      <xs:element minOccurs="0" name="TagID" type="xs:int" />
+      <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TagMember" nillable="true" type="tns:TagMember" />
+  <xs:complexType name="ArrayOfFAQMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FAQMember" nillable="true" type="tns:FAQMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFAQMember" nillable="true" type="tns:ArrayOfFAQMember" />
+  <xs:complexType name="FAQMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAQCatID" type="xs:int" />
+      <xs:element minOccurs="0" name="FAQCatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAQID" type="xs:int" />
+      <xs:element minOccurs="0" name="FAQName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KBID" type="xs:int" />
+      <xs:element minOccurs="0" name="VisitCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FAQMember" nillable="true" type="tns:FAQMember" />
+  <xs:complexType name="ArrayOfFAQCategoryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FAQCategoryMember" nillable="true" type="tns:FAQCategoryMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFAQCategoryMember" nillable="true" type="tns:ArrayOfFAQCategoryMember" />
+  <xs:complexType name="FAQCategoryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FAQCatID" type="xs:int" />
+      <xs:element minOccurs="0" name="FAQCatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FAQOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="KBID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FAQCategoryMember" nillable="true" type="tns:FAQCategoryMember" />
+  <xs:complexType name="ArrayOfCategoryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CategoryMember" nillable="true" type="tns:CategoryMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategoryMember" nillable="true" type="tns:ArrayOfCategoryMember" />
+  <xs:complexType name="CategoryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberArticle" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryMember" nillable="true" type="tns:CategoryMember" />
+  <xs:complexType name="ArrayOfSolutionFinderMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolutionFinderMember" nillable="true" type="tns:SolutionFinderMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolutionFinderMember" nillable="true" type="tns:ArrayOfSolutionFinderMember" />
+  <xs:complexType name="SolutionFinderMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsParent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SFChoiceID" type="xs:int" />
+      <xs:element minOccurs="0" name="SFChoiceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SFstatement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SolutionFinderID" type="xs:int" />
+      <xs:element minOccurs="0" name="SolutionFinderName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolutionFinderMember" nillable="true" type="tns:SolutionFinderMember" />
+  <xs:complexType name="ArrayOfGlossaryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlossaryMember" nillable="true" type="tns:GlossaryMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlossaryMember" nillable="true" type="tns:ArrayOfGlossaryMember" />
+  <xs:complexType name="GlossaryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GlossaryID" type="xs:int" />
+      <xs:element minOccurs="0" name="GlossaryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlossaryMember" nillable="true" type="tns:GlossaryMember" />
+  <xs:complexType name="ArrayOfGlossaryTermMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlossaryTermMember" nillable="true" type="tns:GlossaryTermMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlossaryTermMember" nillable="true" type="tns:ArrayOfGlossaryTermMember" />
+  <xs:complexType name="GlossaryTermMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Term" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlossaryTermMember" nillable="true" type="tns:GlossaryTermMember" />
+  <xs:complexType name="ArrayOfGlossaryItemMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlossaryItemMember" nillable="true" type="tns:GlossaryItemMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlossaryItemMember" nillable="true" type="tns:ArrayOfGlossaryItemMember" />
+  <xs:complexType name="GlossaryItemMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GlossaryItemID" type="xs:int" />
+      <xs:element minOccurs="0" name="GlossaryItemOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="GlossaryItemValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlossaryItemMember" nillable="true" type="tns:GlossaryItemMember" />
+  <xs:complexType name="ATRMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ATRConfirmText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRResultText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ATRSubmitText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfATRField" />
+      <xs:element minOccurs="0" name="ToEmail" nillable="true" type="tns:ArrayOfATREmail" />
+      <xs:element minOccurs="0" name="Upload" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRMember" nillable="true" type="tns:ATRMember" />
+  <xs:complexType name="ArrayOfATRField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRField" nillable="true" type="tns:ATRField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRField" nillable="true" type="tns:ArrayOfATRField" />
+  <xs:complexType name="ATRField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DropDownList" nillable="true" type="tns:ArrayOfATRDropDownlist" />
+      <xs:element minOccurs="0" name="FieldID" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRField" nillable="true" type="tns:ATRField" />
+  <xs:complexType name="ArrayOfATRDropDownlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATRDropDownlist" nillable="true" type="tns:ATRDropDownlist" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATRDropDownlist" nillable="true" type="tns:ArrayOfATRDropDownlist" />
+  <xs:complexType name="ATRDropDownlist">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ValueID" type="xs:int" />
+      <xs:element minOccurs="0" name="ValueName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueOrder" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATRDropDownlist" nillable="true" type="tns:ATRDropDownlist" />
+  <xs:complexType name="ArrayOfATREmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATREmail" nillable="true" type="tns:ATREmail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfATREmail" nillable="true" type="tns:ArrayOfATREmail" />
+  <xs:complexType name="ATREmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ATREmail" nillable="true" type="tns:ATREmail" />
+  <xs:complexType name="ArticleInfoMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleView" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleInfoMember" nillable="true" type="tns:ArticleInfoMember" />
+  <xs:complexType name="ArticleInfoProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleAttachments" nillable="true" type="tns:ArrayOfAttachment" />
+      <xs:element minOccurs="0" name="ArticleFileExtension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ArticleLinks" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ArticleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Categorization" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailSubscription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastReviewedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastViewDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberView" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedArticle" nillable="true" type="tns:ArrayOfArticleRelated" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleInfoProperties" nillable="true" type="tns:ArticleInfoProperties" />
+  <xs:complexType name="ArrayOfAttachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" nillable="true" type="tns:Attachment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttachment" nillable="true" type="tns:ArrayOfAttachment" />
+  <xs:complexType name="Attachment">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="Content" nillable="true" type="q9:MemoryStream" />
+      <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Attachment" nillable="true" type="tns:Attachment" />
+  <xs:complexType name="ArrayOfArticleRelated">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleRelated" nillable="true" type="tns:ArticleRelated" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleRelated" nillable="true" type="tns:ArrayOfArticleRelated" />
+  <xs:complexType name="ArticleRelated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleRelated" nillable="true" type="tns:ArticleRelated" />
+  <xs:complexType name="ArticleContentMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleAttachments" nillable="true" type="tns:ArrayOfAttachment" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="ArticleContent" nillable="true" type="q10:MemoryStream" />
+      <xs:element minOccurs="0" name="ArticleContentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleExt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleContentMember" nillable="true" type="tns:ArticleContentMember" />
+  <xs:complexType name="ArrayOfArticleResourceMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleResourceMember" nillable="true" type="tns:ArticleResourceMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleResourceMember" nillable="true" type="tns:ArrayOfArticleResourceMember" />
+  <xs:complexType name="ArticleResourceMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ResourceContentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceFileExtention" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceID" type="xs:int" />
+      <xs:element minOccurs="0" name="ResourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UploadDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleResourceMember" nillable="true" type="tns:ArticleResourceMember" />
+</xs:schema>

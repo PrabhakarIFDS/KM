@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="KMPortal_MasterPage" Url ="_Catalogs/masterpage" List="116">
+    <File Path="KMPortal_MasterPage\KMMaster.master" Url="KMMaster.master" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010061CA36E03A5A4076A44B842C68A55C31" Name="FAQ" Group="IFDS KMPortalContent Types" Description="FAQ Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{c9c09b11-54a4-4b50-a13d-1269f37e6f53}" DisplayName="Answer" Required="TRUE" Description="" Name="Answer" />
+      <FieldRef ID="{FF6FB1E8-BB67-4CC1-A23D-73421A57B59E}" DisplayName="Department Tags" Required="TRUE" Description="Department" Name="DepartmentTags" />
+      <FieldRef ID="{7485BC0E-9DA3-4A98-A545-628D66C9E7CB}" DisplayName="Product Tags" Required="TRUE" Description="Product" Name="ProductTags" />
+      <FieldRef ID="{1FFABE9A-04E9-485B-9CC4-DBFA5014FD48}" DisplayName="DepartmentTagsTaxHTField" Required="False" Hidden="TRUE" Name="DepartmentTagsTaxHTField" />
+      <FieldRef ID="{23676E3F-7D9F-4553-9810-2167FC1E373B}" DisplayName="ProductTagsTaxHTField" Required="False" Hidden="TRUE" Name="ProductTagsTaxHTField" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

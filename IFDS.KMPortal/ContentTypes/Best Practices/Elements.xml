@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Document (0x0101) -->
+  <ContentType ID="0x0101007CEC853D1DDB41B5A057B76E6F277F1C" Name="Best Practices" Group="IFDS KMPortalContent Types" Description="Best Practices" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{FF6FB1E8-BB67-4CC1-A23D-73421A57B59E}" DisplayName="Department Tags" Required="TRUE" Description="Department" Name="DepartmentTags" />
+      <FieldRef ID="{1FFABE9A-04E9-485B-9CC4-DBFA5014FD48}"  Name="DepartmentTagsTaxHTField" />
+      <FieldRef ID="{7485BC0E-9DA3-4A98-A545-628D66C9E7CB}" DisplayName="Product Tags" Required="TRUE" Description="Product" Name="ProductTags" />
+      <FieldRef ID="{23676E3F-7D9F-4553-9810-2167FC1E373B}" Name="ProductTagsTaxHTField" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

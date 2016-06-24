@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.User" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UserMemberBasic">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ForumSuspended" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRegistered" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserProfile" nillable="true" type="tns:ExternalProfileMember" />
+          <xs:element minOccurs="0" name="UserSession" nillable="true" type="tns:KBUserSession" />
+          <xs:element minOccurs="0" name="WikiSuspended" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserMember" nillable="true" type="tns:UserMember" />
+  <xs:complexType name="UserMemberBasic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActiveDirectoryUser" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserMemberBasic" nillable="true" type="tns:UserMemberBasic" />
+  <xs:complexType name="ExternalProfileMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleGroup" nillable="true" type="tns:ArrayOfArticleGroupMember" />
+      <xs:element minOccurs="0" name="EmbeddedExpand" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ForumManagement" nillable="true" type="tns:ProfileForumManagementMember" />
+      <xs:element minOccurs="0" name="PortalAccess" nillable="true" type="tns:ArrayOfPortalMember" />
+      <xs:element minOccurs="0" name="ProfileID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WikiManagement" nillable="true" type="tns:ProfileWikiManagementMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExternalProfileMember" nillable="true" type="tns:ExternalProfileMember" />
+  <xs:complexType name="ArrayOfArticleGroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleGroupMember" nillable="true" type="tns:ArticleGroupMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleGroupMember" nillable="true" type="tns:ArrayOfArticleGroupMember" />
+  <xs:complexType name="ArticleGroupMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleGroupMember" nillable="true" type="tns:ArticleGroupMember" />
+  <xs:complexType name="ProfileForumManagementMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddAttachmentPost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddAttachmentThreads" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatePosts" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreateThreads" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeleteAttachmentPost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeleteAttachmentThreads" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeletePost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EditPost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManageForum" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OpenCloseForum" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RestoreForumPost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SuspendForumPost" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileForumManagementMember" nillable="true" type="tns:ProfileForumManagementMember" />
+  <xs:complexType name="ArrayOfPortalMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PortalMember" nillable="true" type="tns:PortalMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortalMember" nillable="true" type="tns:ArrayOfPortalMember" />
+  <xs:complexType name="PortalMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IPRestrict" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortalType" type="tns:PortalTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalMember" nillable="true" type="tns:PortalMember" />
+  <xs:simpleType name="PortalTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Registration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Secure">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Personalize">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PortalTypes" nillable="true" type="tns:PortalTypes" />
+  <xs:complexType name="ProfileWikiManagementMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddTag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Create" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Delete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DeleteTag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Edit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EditTag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ManageWiki" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Restore" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Suspend" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProfileWikiManagementMember" nillable="true" type="tns:ProfileWikiManagementMember" />
+  <xs:complexType name="KBUserSession">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:KBUserSessionBasic">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PortalId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KBUserSession" nillable="true" type="tns:KBUserSession" />
+  <xs:complexType name="KBUserSessionBasic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Port" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secure" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeClient" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KBUserSessionBasic" nillable="true" type="tns:KBUserSessionBasic" />
+  <xs:complexType name="ArrayOfPortalSettingField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PortalSettingField" nillable="true" type="tns:PortalSettingField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortalSettingField" nillable="true" type="tns:ArrayOfPortalSettingField" />
+  <xs:complexType name="PortalSettingField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldID" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalSettingField" nillable="true" type="tns:PortalSettingField" />
+  <xs:complexType name="PortalSettingMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:ArrayOfPortalSettingField" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortalSettingMember" nillable="true" type="tns:PortalSettingMember" />
+  <xs:complexType name="ArrayOfExternalProfileMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExternalProfileMember" nillable="true" type="tns:ExternalProfileMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExternalProfileMember" nillable="true" type="tns:ArrayOfExternalProfileMember" />
+  <xs:complexType name="ArrayOfUserMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserMember" nillable="true" type="tns:UserMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserMember" nillable="true" type="tns:ArrayOfUserMember" />
+  <xs:simpleType name="UserType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="InternalUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ExternalUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserType" nillable="true" type="tns:UserType" />
+</xs:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.KBRatingReputation" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.KBRatingReputation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="SetRatingMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SourceContentID" type="xs:int" />
+      <xs:element minOccurs="0" name="SourceID" type="tns:SourceRating" />
+      <xs:element minOccurs="0" name="Value" type="tns:RatingValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetRatingMember" nillable="true" type="tns:SetRatingMember" />
+  <xs:simpleType name="SourceRating">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Dumb" />
+      <xs:enumeration value="Article" />
+      <xs:enumeration value="Forum" />
+      <xs:enumeration value="Thread" />
+      <xs:enumeration value="Post" />
+      <xs:enumeration value="Wiki" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SourceRating" nillable="true" type="tns:SourceRating" />
+  <xs:simpleType name="RatingValue">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Postive">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Negative">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RatingValue" nillable="true" type="tns:RatingValue" />
+  <xs:complexType name="RatingValueMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Negative" type="xs:int" />
+      <xs:element minOccurs="0" name="Positive" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RatingValueMember" nillable="true" type="tns:RatingValueMember" />
+</xs:schema>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="52c71ad6-726e-4bc6-b893-bbf140be0cbf" solutionId="52c71ad6-726e-4bc6-b893-bbf140be0cbf" resetWebServer="true" sharePointProductVersion="15.0" name="IFDS.KMPortal" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="C:\Program Files (x86)\Microsoft Visual Studio 12.0\Blend\Newtonsoft.Json.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="e6834154-1a7a-49c3-b08e-613013fc13bb" />
+    <featureReference itemId="7f746b07-1614-4868-981d-791190368e0a" />
+    <featureReference itemId="8601b73a-728b-4904-a12e-2f44a7d9eace" />
+    <featureReference itemId="c4f53cbb-c7c5-424b-8798-0f784c7409f5" />
+    <featureReference itemId="6a42828c-04ac-4a0f-b9a7-f126a2f0cffe" />
+    <featureReference itemId="8dcf54b9-8d80-4a12-b08a-03ac7a7179a0" />
+    <featureReference itemId="cb484e54-ea0b-466b-893d-05341113b6f4" />
+    <featureReference itemId="47b3870b-b0fc-4870-968c-2a61b5c7710c" />
+    <featureReference itemId="16401314-1d9a-472d-9230-2185d7d4db14" />
+    <featureReference itemId="41fb64d0-b9ec-4d47-b14f-385f773b66bd" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="f4d476c1-b9a5-403a-b006-a58b2fb6a60e" />
+    <projectItemReference itemId="cbc03495-797b-44cc-a10f-5605997c86ce" />
+    <projectItemReference itemId="82888391-3ab9-43bb-be90-c1581379287e" />
+  </projectItems>
+</package>

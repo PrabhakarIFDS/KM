@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="FAQWebPart" List="113" Url="_catalogs/wp">
+    <File Path="FAQWebPart\FAQWebPart.webpart" Url="IFDS.KMPortal_FAQWebPart.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="IFDS KMPortal Webparts" />
+    </File>
+  </Module>
+</Elements>

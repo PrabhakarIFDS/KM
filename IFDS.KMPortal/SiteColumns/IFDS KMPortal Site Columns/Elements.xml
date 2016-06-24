@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field
+     ID="{c9c09b11-54a4-4b50-a13d-1269f37e6f53}"
+     Name="Answer"
+     DisplayName="Answer"
+     Type="Note"
+     Mult="TRUE"
+     Required="True"
+     NumLines="6"
+     RichTextMode="TRUE"
+     RichText="TRUE"
+     Group="IFDS KMPortal Site Columns">
+  </Field>
+  <Field
+    ID="{1FFABE9A-04E9-485B-9CC4-DBFA5014FD48}"
+    Name="DepartmentTagsTaxHTField"
+    DisplayName="DepartmentTagsTaxHTField"
+    StaticName="DepartmentTagsTaxHTField"
+    Type="Note"
+    ShowInViewForms ="FALSE"
+   Required="False"
+   Hidden="TRUE"
+   CanToggleHidden="TRUE"
+   EnforceUniqueValues="FALSE"
+    Group="IFDS KMPortal Site Columns">
+  </Field>
+  <Field
+    ID="{FF6FB1E8-BB67-4CC1-A23D-73421A57B59E}"
+    Name="DepartmentTags"
+    DisplayName="Department Tags"
+    Type="TaxonomyFieldType"
+    ShowField="Term1033"
+    Required="True"
+    EnforceUniqueValues="FALSE"
+    Group="IFDS KMPortal Site Columns">
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+       <Name>IsPathRendered</Name>
+        <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">
+          true
+         </Value>
+       </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{1FFABE9A-04E9-485B-9CC4-DBFA5014FD48}</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+  <Field
+   ID="{23676E3F-7D9F-4553-9810-2167FC1E373B}"
+   Name="ProductTagsTaxHTField"
+   StaticName="ProductTagsTaxHTField"
+   DisplayName="ProductTagsTaxHTField"
+   Type="Note"
+   ShowInViewForms ="FALSE"
+   Required="False"
+   Hidden="TRUE"
+   CanToggleHidden="TRUE"
+   EnforceUniqueValues="FALSE"
+   Group="IFDS KMPortal Site Columns">
+  </Field>
+  <Field
+   ID="{7485BC0E-9DA3-4A98-A545-628D66C9E7CB}"
+   Name="ProductTags"
+   DisplayName="Product Tags"
+   Type="TaxonomyFieldType"
+   ShowField="Term1033"
+   Required="True"
+   EnforceUniqueValues="FALSE"
+   Group="IFDS KMPortal Site Columns">
+    <Customization>
+      <ArrayOfProperty>
+        <Property>
+          <Name>IsPathRendered</Name>
+          <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">
+            true
+          </Value>
+        </Property>
+        <Property>
+          <Name>TextField</Name>
+          <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{23676E3F-7D9F-4553-9810-2167FC1E373B}</Value>
+        </Property>
+      </ArrayOfProperty>
+    </Customization>
+  </Field>
+
+</Elements>

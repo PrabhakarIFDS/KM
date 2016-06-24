@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Title="IFDSKMPORTAL" Revision="3" ListDir="$Resources:core,lists_Folder;" xmlns:ows="Microsoft SharePoint" UIVersion="15" HideSiteContentsLink="true">
+  <NavBars>
+    <NavBar Name="$Resources:core,category_Top;" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Body="&lt;a ID='onettopnavbar#LABEL_ID#' href='#URL#' accesskey='J'&gt;#LABEL#&lt;/a&gt;" ID="1002" />
+    <NavBar Name="$Resources:core,category_NavHome;" Prefix="&lt;table border='0' cellpadding='4' cellspacing='0'&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border='0' cellpadding='0' cellspacing='0'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/15/images/blank.gif' id='100' alt='' border='0'&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign='top'&gt;&lt;a id='onetleftnavbar#LABEL_ID#' href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1031" />
+    <NavBar Name="$Resources:core,category_SiteContents;" Prefix="&lt;table border='0' cellpadding='4' cellspacing='0'&gt;" Body="&lt;tr&gt;&lt;td&gt;&lt;table border='0' cellpadding='0' cellspacing='0'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src='/_layouts/15/images/blank.gif' id='100' alt='' border='0'&gt;&amp;nbsp;&lt;/td&gt;&lt;td valign='top'&gt;&lt;a id='onetleftnavbar#LABEL_ID#' href='#URL#'&gt;#LABEL#&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;" Suffix="&lt;/table&gt;" ID="1034" />
+    <NavBar Name="$Resources:core,SiteSettings_SearchNav_Title;" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Body="&lt;a ID='onettopnavbar#LABEL_ID#' href='#URL#' accesskey='J'&gt;#LABEL#&lt;/a&gt;" ID="1040" />
+  </NavBars>
+  <ListTemplates>
+  </ListTemplates>
+  <DocumentTemplates>
+    <DocumentTemplate Path="STS" Name="" DisplayName="$Resources:core,doctemp_None;" Type="100" Default="FALSE" Description="$Resources:core,doctemp_None_Desc;" />
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word97;" Type="101" Description="$Resources:core,doctemp_Word97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\word\wdtmpl.doc" TargetName="Forms/template.doc" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel97;" Type="103" Description="$Resources:core,doctemp_Excel97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xl\xltmpl.xls" TargetName="Forms/template.xls" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint97;" Type="104" Description="$Resources:core,doctemp_Powerpoint97_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\ppt\pptmpl.pot" TargetName="Forms/template.pot" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word;" Type="121" Default="TRUE" Description="$Resources:core,doctemp_Word_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\word\wdtmpl.dotx" TargetName="Forms/template.dotx" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel;" Type="122" Description="$Resources:core,doctemp_Excel_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xl\xltmpl.xlsx" TargetName="Forms/template.xlsx" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Powerpoint;" Type="123" Description="$Resources:core,doctemp_Powerpoint_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\ppt\pptmpl.pptx" TargetName="Forms/template.pptx" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_OneNote;" Type="111" Description="$Resources:core,doctemp_OneNote_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\onenote\template.onepkg" TargetName="Forms/template.onepkg" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_FP;" Type="102" Description="$Resources:core,doctemp_FP_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\fp\fptmpl.htm" TargetName="Forms/template.htm" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_BasicPage;" Type="105" Description="$Resources:core,doctemp_BasicPage_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\blankpgs\_basicpage.htm" TargetName="Forms/_basicpage.htm" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_WebPartPage;" Type="106" Description="$Resources:core,doctemp_WebPartPage_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\smartpgs\_webpartpage.htm" TargetName="Forms/_webpartpage.htm" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+    <DocumentTemplate XMLForm="TRUE" Path="STS" DisplayName="$Resources:core,doctemp_BlankForm;" Type="1000" Default="TRUE" Description="$Resources:core,doctemp_BlankForm_Desc;">
+      <DocumentTemplateFiles>
+        <DocumentTemplateFile Name="doctemp\xmlforms\blank\template.xml" TargetName="Forms/template.xml" Default="TRUE" />
+      </DocumentTemplateFiles>
+    </DocumentTemplate>
+  </DocumentTemplates>
+  <Configurations>
+    <Configuration ID="-1" Name="NewWeb" MasterUrl="_catalogs/masterpage/seattle.master" />
+    <Configuration ID="0" Name="Default" MasterUrl="_catalogs/masterpage/seattle.master">
+      <Lists>
+        <List FeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101" Type="101" Title="$Resources:core,shareddocuments_Title_15;" Url="$Resources:core,shareddocuments_Folder;" OnQuickLaunch="TRUE" QuickLaunchHeading="TRUE" />
+      </Lists>
+      <Modules>
+        <Module Name="Default" />
+      </Modules>
+      <SiteFeatures>
+        <!-- Workflow Expiration -->
+        <!--
+        <Feature ID="C85E5759-F323-4EFB-B548-443D2216EFB5" />  -->
+        <Feature ID="A392DA98-270B-4e85-9769-04C0FDE267AA">
+          <!-- PublishingPrerequisites -->
+        </Feature>
+        <!--   <Feature ID="7C637B23-06C4-472d-9A9A-7C175762C5C4">
+          -->
+        <!-- ViewFormPagesLockDown -->
+        <!--
+        </Feature> -->
+        <Feature ID="AEBC918D-B20F-4a11-A1DB-9ED84D79C87E">
+          <!-- PublishingResources -->
+
+        </Feature>
+        <!-- PublishingLayouts-->
+        <Feature ID="D3F51BE2-38A8-4e44-BA84-940D35BE1566"></Feature>
+
+
+
+
+        <Feature ID="F6924D36-2FA8-4f0b-B16D-06B7250180FA">
+
+          <!--Office SharePoint Server Publishing-->
+        </Feature>
+        <!-- BasicWebParts Feature -->
+        <Feature ID="00BFEA71-1C5E-4A24-B310-BA51C3EB7A57" />
+        <!-- Three-state Workflow Feature -->
+        <Feature ID="FDE5D850-671E-4143-950A-87B473922DC7" />
+
+
+
+        <!-- Reporting Feature -->
+        <Feature ID="7094bd89-2cfe-490a-8c7e-fbace37b4a34" />
+
+
+        <!-- Social Site Feature -->
+        <Feature ID="4326e7fc-f35a-4b0f-927c-36264b0a4cf0" />
+
+        <!-- Ratings -->
+        <Feature ID="915c240e-a6cc-49b8-8b2c-0bff8b553ed3" />
+
+
+
+        <!-- CrossSiteCollectionPublishing Feature -->
+        <Feature ID="151d22d9-95a8-4904-a0a3-22e4db85d1e0" />
+
+
+        <!-- IFDS.KMPortal Master Page Feature -->
+        <Feature ID="cd321db3-7b34-4fb8-afa8-4608a36db937" />
+
+        <!-- IFDS.KMPortal PageLayouts Feature -->
+        <Feature ID="b0535dd1-9e64-45fa-8a7e-267009dde7da" />
+
+        <!-- IFDS.KMPortal ContentTypes Feature -->
+        <Feature ID="c939bd40-a625-4bd8-bae8-acf7a7827406" />
+
+
+
+        <!-- IFDS.KMPortal web parts -->
+        <Feature ID="15d26f51-c14c-4367-8e09-04676bc25a21" />
+
+        <!-- Sharepoint Server Standard Site collection Feature  base site -->
+
+        <Feature ID="b21b090c-c796-4b0f-ac0f-7ef1659c20ae" />
+
+        <!-- IFDS.KMPortal SiteSetup Feature -->        
+
+        <Feature ID="216a8f19-0705-4f29-be61-fdd766c44463" />
+
+       
+
+      </SiteFeatures>
+      <WebFeatures>
+
+        <!--Workflow Service Store-->
+
+        <Feature ID="2c63df2b-ceab-42c6-aeff-b3968162d4b1" />
+
+        <!--Workflow Task-->
+
+        <Feature ID="57311b7a-9afd-4ff0-866e-9393ad6647b1" />
+        <!-- Publishing web -->
+        <Feature ID="94c94ca6-b32f-4da9-a9e3-1f3d343d7ecb">
+        </Feature>
+
+        <!-- Office SharePoint Server Publishing -->
+
+        <Feature ID="22A9EF51-737B-4ff2-9346-694633FE4416">
+        </Feature>
+
+
+
+
+        <!-- TeamCollab Feature -->
+        <Feature ID="00BFEA71-4EA5-48D4-A4AD-7EA5C011ABE5" />
+
+
+
+
+
+        <!-- MobilityRedirect -->
+        <Feature ID="F41CC668-37E5-4743-B4A8-74D1DB3FD8A4" />
+        <!-- WikiPageHomePage Feature -->
+        <Feature ID="00BFEA71-D8FE-4FEC-8DAD-01C19A6E4053" />
+        <!-- SiteNotebook Feature -->
+        <Feature ID="F151BB39-7C3B-414F-BB36-6BF18872052F" />
+        <!-- Getting Started List instance -->
+        <Feature ID="4AEC7207-0D02-4f4f-AA07-B370199CD0C7" />
+        <!-- MDS -->
+        <Feature ID="87294C72-F260-42f3-A41B-981A2FFCE37A" />
+
+        <!-- CommunitySite feature -->
+        <Feature ID="961d6a9c-4388-4cf2-9733-38ee8c89afd4" />
+
+
+
+        <!-- IFDS.KMPortal Lists -->
+        <Feature ID="8197f3e3-6d95-4901-bed5-fce991635d42" />
+
+        <!-- Base web-->
+        <Feature ID="99fe402e-89a0-45aa-9163-85342e865dc8" />
+
+        <!--Department Site Home page with webparts configured-->
+
+        <Feature ID="90b801ee-d622-4704-9525-8e331a0bcbdf"/>
+
+      </WebFeatures>
+    </Configuration>
+  </Configurations>
+  <Modules>
+    <Module Name="Default" Url="" Path="">
+      <File Url="default.aspx" NavBarHome="True">
+        <NavBarPage Name="~siteTitle" Url="~site" ID="1002" Position="Start" />
+        <NavBarPage Name="~siteTitle" Url="" ID="0" Position="Start" />
+      </File>
+    </Module>
+    <Module Name="DefaultBlank" Url="" Path="">
+      <File Url="default.aspx" NavBarHome="True" Type="Ghostable">
+        <NavBarPage Name="~siteTitle" Url="~site" ID="1002" Position="Start" />
+        <NavBarPage Name="~siteTitle" Url="" ID="0" Position="Start" />
+      </File>
+    </Module>
+    <Module Name="DWS" Url="">
+      <File Url="defaultdws.aspx" Name="default.aspx">
+        <View List="$Resources:core,lists_Folder;/$Resources:core,announce_Folder;" BaseViewID="0" WebPartZoneID="Top" />
+        <View List="$Resources:core,lists_Folder;/$Resources:core,links_Folder;" BaseViewID="0" WebPartZoneID="Right" WebPartOrder="2" />
+        <View List="$Resources:core,shareddocuments_Folder;" BaseViewID="1" WebPartZoneID="Left" />
+        <AllUsersWebPart WebPartZoneID="Right" WebPartOrder="1">
+          <![CDATA[
+                   <WebPart xmlns="http://schemas.microsoft.com/WebPart/v2">
+                      <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+                      <TypeName>Microsoft.SharePoint.WebPartPages.MembersWebPart</TypeName>
+                      <Title>$Resources:wp_Members;</Title>
+                      <Description>$Resources:wp_Members_Desc;</Description>
+                      <FrameType>Standard</FrameType>
+                      <IsVisible>true</IsVisible>
+                      </WebPart>
+                   ]]>
+        </AllUsersWebPart>
+        <NavBarPage Name="$Resources:core,nav_Home;" Url="~site" ID="1002" Position="Start" />
+        <NavBarPage Name="$Resources:core,nav_Home;" ID="0" Position="Start" />
+      </File>
+    </Module>
+  </Modules>
+  <ServerEmailFooter>$Resources:ServerEmailFooter;</ServerEmailFooter>
+</Project>

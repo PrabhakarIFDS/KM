@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFDS.KMPortal", "IFDS.KMPortal\IFDS.KMPortal.csproj", "{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFDS.KMPortal.KnowledgeBaseJob", "IFDS.KMPortal.KnowledgeBaseJob\IFDS.KMPortal.KnowledgeBaseJob.csproj", "{915E594B-E737-48B0-B2AE-9B698DC3A001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFDS.KMPortal.PACEPartnerJob", "IFDS.KMPortal.PACEPartnerJob\IFDS.KMPortal.PACEPartnerJob.csproj", "{0F373400-13B7-4883-B94D-01D002B2C85E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFDS.KMPortal.ServiceNow", "IFDS.KMPortal.ServiceNow\IFDS.KMPortal.ServiceNow.csproj", "{74138BA2-6C70-4EB9-9474-DD525040A561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMPortalEnrichmentService", "KMPortalEnrichmentService\KMPortalEnrichmentService.csproj", "{76854092-BC53-4738-A503-8CA3B04015B4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://cygnus.cognizant.com/tfs/ifdscanadaltd
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IFDS.KMPortal\\IFDS.KMPortal.csproj
+		SccProjectName1 = IFDS.KMPortal
+		SccLocalPath1 = IFDS.KMPortal
+		SccProjectUniqueName2 = IFDS.KMPortal.KnowledgeBaseJob\\IFDS.KMPortal.KnowledgeBaseJob.csproj
+		SccProjectName2 = IFDS.KMPortal.KnowledgeBaseJob
+		SccLocalPath2 = IFDS.KMPortal.KnowledgeBaseJob
+		SccProjectUniqueName3 = IFDS.KMPortal.PACEPartnerJob\\IFDS.KMPortal.PACEPartnerJob.csproj
+		SccProjectName3 = IFDS.KMPortal.PACEPartnerJob
+		SccLocalPath3 = IFDS.KMPortal.PACEPartnerJob
+		SccProjectUniqueName4 = IFDS.KMPortal.ServiceNow\\IFDS.KMPortal.ServiceNow.csproj
+		SccProjectName4 = IFDS.KMPortal.ServiceNow
+		SccLocalPath4 = IFDS.KMPortal.ServiceNow
+		SccProjectUniqueName5 = KMPortalEnrichmentService\\KMPortalEnrichmentService.csproj
+		SccProjectName5 = KMPortalEnrichmentService
+		SccLocalPath5 = KMPortalEnrichmentService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{915E594B-E737-48B0-B2AE-9B698DC3A001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915E594B-E737-48B0-B2AE-9B698DC3A001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915E594B-E737-48B0-B2AE-9B698DC3A001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915E594B-E737-48B0-B2AE-9B698DC3A001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F373400-13B7-4883-B94D-01D002B2C85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F373400-13B7-4883-B94D-01D002B2C85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F373400-13B7-4883-B94D-01D002B2C85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F373400-13B7-4883-B94D-01D002B2C85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74138BA2-6C70-4EB9-9474-DD525040A561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74138BA2-6C70-4EB9-9474-DD525040A561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74138BA2-6C70-4EB9-9474-DD525040A561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74138BA2-6C70-4EB9-9474-DD525040A561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76854092-BC53-4738-A503-8CA3B04015B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76854092-BC53-4738-A503-8CA3B04015B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76854092-BC53-4738-A503-8CA3B04015B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76854092-BC53-4738-A503-8CA3B04015B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

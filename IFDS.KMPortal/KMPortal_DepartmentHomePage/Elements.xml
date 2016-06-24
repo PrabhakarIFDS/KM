@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="KMPortal_DepartmentHomePage"  Url="Pages">
+    <File Url="IFDS.aspx" Path="KMPortal_DepartmentHomePage\IFDS.aspx" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE">
+      <Property Name="PublishingPageLayout" Value="~SiteCollection/_catalogs/masterpage/KMPortalDepartmentPageLayout.aspx, KMPortal Department PageLayout" />
+
+      <AllUsersWebPart WebPartZoneID="Header" WebPartOrder="0">
+      
+        <![CDATA[        
+        <?xml version="1.0" encoding="utf-8"?>
+          <WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+            <Title>Content Editor</Title>
+            <FrameType>None</FrameType>
+            <Description>Allows authors to enter rich text content.</Description>
+            <IsIncluded>true</IsIncluded>
+            <ZoneID>Header</ZoneID>
+            <PartOrder>0</PartOrder>
+            <FrameState>Normal</FrameState>
+            <Height />
+            <Width />
+            <AllowRemove>true</AllowRemove>
+            <AllowZoneChange>true</AllowZoneChange>
+            <AllowMinimize>true</AllowMinimize>
+            <AllowConnect>true</AllowConnect>
+            <AllowEdit>true</AllowEdit>
+            <AllowHide>true</AllowHide>
+            <IsVisible>true</IsVisible>
+            <DetailLink />
+            <HelpLink />
+            <HelpMode>Modeless</HelpMode>
+            <Dir>Default</Dir>
+            <PartImageSmall />
+            <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+            <PartImageLarge>/_layouts/15/images/mscontl.gif</PartImageLarge>
+            <IsIncludedFilter />
+            <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+            <TypeName>Microsoft.SharePoint.WebPartPages.ContentEditorWebPart</TypeName>
+            <ContentLink xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+            <Content xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor">
+            <![CDATA[​​<div class="ms-rtestate-read ms-rte-embedcode ms-rte-embedil ms-rtestate-notify" contenteditable="false" unselectable="on"> 
+             <div class="banner-img" unselectable="on" style="margin: 0px auto; width: 1307px; background-image: url(&quot;https://sharepoint-web.gtm.canada01.ifdsnet.int/sites/depkm/publishingimages/pages/km/site-banner-km.jpg&quot;);">
+                <div class="back-box" unselectable="on" style="width: 648px; height: 228px; margin-left: 600px; background-image: url(&quot;https://sharepoint-web.gtm.canada01.ifdsnet.int/sites/depkm/publishingimages/pages/km/white-box-2.png&quot;);"> 
+                   <h1 unselectable="on" style="margin: 0px 18px 5px; color: #3a686c; font-size: 54px; font-weight: 600; opacity: 1 !important;">Knowledge Management</h1> 
+                   <h4 unselectable="on" style="margin: 0px 18px; color: #00386b; font-size: 19px;">Welcome to the Knowledge Management (KM) site. The KM team assists IFDS departments &amp; employees in the creation, maintenance, and consumption of vital information that facilitates their day-to-day work. Click 
+                      <a href="/sites/depKM/Lists/KM%20News/DispForm.aspx?ID=1&amp;Source=https%3A%2F%2Fsharepoint%2Dweb%2Egtm%2Ecanada01%2Eifdsnet%2Eint%2Fsites%2FdepKM%2FLists%2FKM%2520News%2FAllItems%2Easpx&amp;ContentTypeId=0x010400EAC30D97E119B449ADECF19556D1DD1F&amp;RootFolder=%2Fsites%2FdepKM%2FLists%2FKM%20News" unselectable="on">here</a> to read more about the KM team at IFDS.</h4> 
+                </div> 
+             </div> 
+          </div> 
+          <p></p>
+          ]]]]><![CDATA[>
+        </Content>        
+           <PartStorage xmlns="http://schemas.microsoft.com/WebPart/v2/ContentEditor" />
+           </WebPart>
+        ]]>
+      </AllUsersWebPart>
+      
+      
+      
+      
+      <AllUsersWebPart WebPartZoneID="Header" WebPartOrder="1">
+        <![CDATA[  
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.KMPortalSearchBoxWebPart.KMPortalSearchBoxWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>        
+        <property name="_srchGlobalSite" type="bool">False</property>
+        <property name="HelpUrl" type="string" />
+        <property name="Hidden" type="bool">False</property>
+        <property name="Description" type="string">Search Web Part to search the contents</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="Title" type="string">IFDS.KMPortal.KMPortalSearchBoxWebPart</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="Width" type="unit" />
+        <property name="Height" type="unit" />
+        <property name="_srchRedirectUrl" type="string">/Pages/SearchResults.aspx</property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopLeftRow" WebPartOrder="0">
+        <![CDATA[  
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.BestPracticesWebPart.BestPracticesWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="_bestTab2" type="string">Job-Specific Documents</property>
+        <property name="TitleUrl" type="string" />
+        <property name="_bestItemCount" type="string">5</property>
+        <property name="HelpUrl" type="string" />
+        <property name="AllowClose" type="bool">True</property>
+        <property name="_BestWidgetTitle" type="string">Best Practices</property>        
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="_bestToolTip" type="string">This widget provides information about Best practices &amp; Onboarding documents</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="_OnboardingListUrl" type="string"></property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="_bestPracticeListUrl" type="string"></property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="Description" type="string"></property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="_bestErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="_bestPracticeListName" type="string">Best Practices</property>
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="Width" type="unit" />
+        <property name="_OnboardingListName" type="string">Onboarding Documents</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="Title" type="string">IFDS.KMPortal - BestPracticesWebPart</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="_bestTab1" type="string">Best Practices</property>
+        <property name="Height" type="unit" />
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopRightRow" WebPartOrder="0">
+        <![CDATA[  
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.FrequentlyUsedDocsWebPart.FrequentlyUsedDocsWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="Height" type="unit" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="_webPartToolTip" type="string">This widget provides information about Frequently Used Documents</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="_siteURL" type="string"></property>
+        <property name="_ErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="_BestWidgetTitle" type="string">Frequently Used Documents</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="Title" type="string">IFDS.KMPortal - FrequentlyUsedDocsWebPart</property>
+        <property name="Description" type="string"></property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="Width" type="unit" />        
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="HelpUrl" type="string" />
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="_itemCount" type="string">5</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopLeftRow" WebPartOrder="1">
+        <![CDATA[  
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.RecentDocumentsWebPart.RecentDocumentsWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="Height" type="unit" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="_siteURL" type="string" />
+        <property name="_ErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="_BestWidgetTitle" type="string">Recently Modified Documents</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="Title" type="string">IFDS.KMPortal.RecentDocumentsWebPart</property>
+        <property name="Description" type="string">IFDS.KMPortal.RecentDocumentsWebPart</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="_bestToolTip" type="string">This widget provides information about Recently modified documents</property>
+        <property name="Width" type="unit" />        
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="HelpUrl" type="string" />
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="_itemCount" type="string">5</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopRightRow" WebPartOrder="1">
+        <![CDATA[  
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.DiscussionListWebPart.DiscussionListWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="TitleUrl" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="_discItemCount" type="string">5</property>
+        <property name="_discWidgetTitle" type="string">Discussion Forum</property>        
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="_discTab2" type="string">Most Recent</property>
+        <property name="_discGlobalSite" type="bool">False</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="_discTab1" type="string">Most Popular</property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="Description" type="string">Disucssion List Web Part to capture all discussions</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="_discErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="_discToolTip" type="string">This widget provides you the information about Discussions</property>
+        <property name="Width" type="unit" />
+        <property name="_discSiteUrl" type="string"></property>
+        <property name="_discListName" type="string">Discussions List</property>
+        <property name="Title" type="string">IFDS.KMPortal.DiscussionListWebPart</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="Height" type="unit" />
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+        ]]>
+      </AllUsersWebPart>
+
+      <AllUsersWebPart WebPartZoneID="TopLeftRow" WebPartOrder="2">
+        <![CDATA[  
+          <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.TopCandLWebPart.TopCandLWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="Height" type="unit" />
+        <property name="_TopContributorsAllDeptListName" type="string">TopContributors-Global</property>
+        <property name="_TopCandLErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="Title" type="string">IFDS.KMPortal - TopCandLWebPart</property>
+        <property name="_TopContributorsItemCount" type="int">5</property>
+        <property name="_TopContributorsListName" type="string">Community Members</property>
+        <property name="_TopCandLTab2" type="string">Top Learners</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="_TopCandLTab1" type="string">Top Contributors</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="_TopCandLGlobalSite" type="bool">False</property>
+        <property name="_TopCandLWidgetTitle" type="string">Top Contributors and Learners</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="Description" type="string"></property>
+        <property name="Width" type="unit" />
+        <property name="_TopLearnersItemCount" type="int">5</property>
+        <property name="TitleUrl" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="Hidden" type="bool">False</property>        
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="_DepartmentsMasterListName" type="string">KMPortal Department Sites</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="_TopCandLWebpartSiteUrl" type="string"></property>
+        <property name="_TopLearnersListName" type="string">TopLearners</property>
+        <property name="_DepartmentMasterListSiteUrl" type="string"></property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="_TopCandLToolTipMsg" type="string">Top Contributors and Learners display items from discussion forums</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+       ]]>
+    </AllUsersWebPart>
+      
+      <AllUsersWebPart WebPartZoneID="TopRightRow" WebPartOrder="2">
+        <![CDATA[  
+      <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IFDS.KMPortal.Webparts.FAQWebPart.FAQWebPart, IFDS.KMPortal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d1dd8d3e6ed24b18" />
+      <importErrorMessage>Cannot import this Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="TitleUrl" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="_faqErrMsg" type="string">An error occurred while processing : please contact your administrator</property>
+        <property name="_faqSiteUrl" type="string"></property>
+        <property name="_faqTab2" type="string">Recently Published</property>
+        <property name="AllowZoneChange" type="bool">True</property>        
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="_faqToolTip" type="string">This widget provides you the information about FAQs</property>
+        <property name="_faqGlobalSite" type="bool">False</property>
+        <property name="HelpMode" type="helpmode">Navigate</property>
+        <property name="_faqItemCount" type="string">5</property>
+        <property name="Description" type="string">FAQ Web Part to capture all faq's</property>
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="_faqWidgetTitle" type="string">FAQs</property>
+        <property name="_faqTab1" type="string">Most Popular</property>
+        <property name="AllowClose" type="bool">True</property>
+        <property name="Width" type="unit" />
+        <property name="_faqListName" type="string">FAQ</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="Title" type="string">IFDS.KMPortal.FAQWebPart</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="Height" type="unit" />
+      </properties>
+    </data>
+  </webPart>
+</webParts>
+     
+       ]]>
+      </AllUsersWebPart>
+
+    </File>
+                  
+  </Module>
+</Elements>

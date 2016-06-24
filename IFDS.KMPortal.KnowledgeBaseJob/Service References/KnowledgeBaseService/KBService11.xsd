@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfArticleContentTemplateMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleContentTemplateMember" nillable="true" type="tns:ArticleContentTemplateMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleContentTemplateMember" nillable="true" type="tns:ArrayOfArticleContentTemplateMember" />
+  <xs:complexType name="ArticleContentTemplateMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Articleid" type="xs:int" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateTabid" type="xs:int" />
+      <xs:element minOccurs="0" name="Templateid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleContentTemplateMember" nillable="true" type="tns:ArticleContentTemplateMember" />
+  <xs:complexType name="ArrayOfArticleCommentMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArticleCommentMember" nillable="true" type="tns:ArticleCommentMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticleCommentMember" nillable="true" type="tns:ArrayOfArticleCommentMember" />
+  <xs:complexType name="ArticleCommentMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatePosted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArticleCommentMember" nillable="true" type="tns:ArticleCommentMember" />
+  <xs:complexType name="ArrayOfKBWorkFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KBWorkFlow" nillable="true" type="tns:KBWorkFlow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKBWorkFlow" nillable="true" type="tns:ArrayOfKBWorkFlow" />
+  <xs:complexType name="KBWorkFlow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KBWorkFlow" nillable="true" type="tns:KBWorkFlow" />
+  <xs:complexType name="ArrayOfKBWorkFlowStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KBWorkFlowStep" nillable="true" type="tns:KBWorkFlowStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKBWorkFlowStep" nillable="true" type="tns:ArrayOfKBWorkFlowStep" />
+  <xs:complexType name="KBWorkFlowStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:WorkFlowType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="KBWorkFlowStep" nillable="true" type="tns:KBWorkFlowStep" />
+  <xs:simpleType name="WorkFlowType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="New">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Published">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pending">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Expired">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WorkFlowType" nillable="true" type="tns:WorkFlowType" />
+</xs:schema>

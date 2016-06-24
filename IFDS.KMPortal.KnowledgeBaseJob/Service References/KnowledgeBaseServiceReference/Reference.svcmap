@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad63b6e7-c5c3-4e27-8ca4-919e9e65d917" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://kbapi-ifds.kb.net/KBService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KBService.xsd" MetadataType="Schema" ID="8c9ce77a-71f8-47c4-a8d2-6de22f28c832" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd12" />
+    <MetadataFile FileName="KBService1.xsd" MetadataType="Schema" ID="b08a172d-d35c-486d-a38a-6519dddf1655" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd9" />
+    <MetadataFile FileName="KBService2.xsd" MetadataType="Schema" ID="8d79ebf1-b10e-4db7-beb6-137c6082e4ca" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd5" />
+    <MetadataFile FileName="KBService3.xsd" MetadataType="Schema" ID="c9cd479b-84bd-4c45-8d41-0555f59f421e" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd6" />
+    <MetadataFile FileName="KBService4.xsd" MetadataType="Schema" ID="a3e2f258-1a4e-4594-9459-7381982a6fde" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd3" />
+    <MetadataFile FileName="KBService5.xsd" MetadataType="Schema" ID="1276092d-df0c-4e0e-b1d8-71e6ef903446" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" />
+    <MetadataFile FileName="KBService6.xsd" MetadataType="Schema" ID="02371b04-adaa-419f-8fcd-7f2e61922712" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd11" />
+    <MetadataFile FileName="KBService.wsdl" MetadataType="Wsdl" ID="565450ae-0229-4cde-8696-bab54486120f" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?wsdl" />
+    <MetadataFile FileName="KBService7.xsd" MetadataType="Schema" ID="5be4c34f-4ed0-4a5e-a9c4-a1095dc5d633" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd8" />
+    <MetadataFile FileName="KBService8.xsd" MetadataType="Schema" ID="70cfb562-5d1d-4815-b55f-c7e0d6eb886d" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd7" />
+    <MetadataFile FileName="KBService9.xsd" MetadataType="Schema" ID="228f673a-bfc2-45f8-85af-b891bb8b2d00" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd4" />
+    <MetadataFile FileName="KBService10.xsd" MetadataType="Schema" ID="940d6dc8-95b5-4fdb-9412-bd69a115fea2" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd2" />
+    <MetadataFile FileName="KBService11.xsd" MetadataType="Schema" ID="c77b83a1-f5cf-4bb1-a4a2-1918a96b3eed" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd13" />
+    <MetadataFile FileName="KBService12.xsd" MetadataType="Schema" ID="40cd42ec-2d9f-4c25-bd41-7f4c1dfe5e05" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd10" />
+    <MetadataFile FileName="KBService13.xsd" MetadataType="Schema" ID="ee8d912f-2fcd-45d1-9472-447840eb9a82" SourceId="1" SourceUrl="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

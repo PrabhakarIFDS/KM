@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.Search" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.Search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="SearchMethod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALLWORD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ANYWORD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BOOLEAN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXACTKEYWORD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EXACTPHRASE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NLQ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WITHINASEARCH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AUTORECOMMEND">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RECALLPREVIOUS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="REFERENCEWORD">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchMethod" nillable="true" type="tns:SearchMethod" />
+  <xs:complexType name="SearchParamsList">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="SearchParamsList" nillable="true" type="tns:SearchParamsList" />
+  <xs:complexType name="ArrayOfSearchParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchParameter" nillable="true" type="tns:SearchParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchParameter" nillable="true" type="tns:ArrayOfSearchParameter" />
+  <xs:complexType name="SearchParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" type="tns:SearchEnum" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchParameter" nillable="true" type="tns:SearchParameter" />
+  <xs:simpleType name="SearchEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PORTALID" />
+      <xs:enumeration value="CLIENTID" />
+      <xs:enumeration value="SESSIONID" />
+      <xs:enumeration value="USERNAME" />
+      <xs:enumeration value="TEXT" />
+      <xs:enumeration value="SEARCHARTICLEAREA" />
+      <xs:enumeration value="SEARCHSORTTYPE" />
+      <xs:enumeration value="ARTICLEKBID" />
+      <xs:enumeration value="ARTICLECATEGORYID" />
+      <xs:enumeration value="ARTICLEATTRIBUTEID" />
+      <xs:enumeration value="ARTICLEGROUPID" />
+      <xs:enumeration value="ARTICLETYPE" />
+      <xs:enumeration value="ARTICLESIZE" />
+      <xs:enumeration value="RELEVANCE" />
+      <xs:enumeration value="ARTICLERATING" />
+      <xs:enumeration value="ARTICLEEXPDATE" />
+      <xs:enumeration value="ARTICLEMODDATE" />
+      <xs:enumeration value="ARTICLECREATEDDATE" />
+      <xs:enumeration value="ARTICLETEMPLATEID" />
+      <xs:enumeration value="ARTICLELOCALE" />
+      <xs:enumeration value="FORUMID" />
+      <xs:enumeration value="ASSOCIATIONTYPE" />
+      <xs:enumeration value="REMOTESITEID" />
+      <xs:enumeration value="REMOTEDBID" />
+      <xs:enumeration value="REMOTEFSID" />
+      <xs:enumeration value="SHAREPOINTID" />
+      <xs:enumeration value="FAQID" />
+      <xs:enumeration value="SFID" />
+      <xs:enumeration value="GLOSSARYID" />
+      <xs:enumeration value="LANGUAGE" />
+      <xs:enumeration value="TAGID" />
+      <xs:enumeration value="SOURCETYPE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchEnum" nillable="true" type="tns:SearchEnum" />
+</xs:schema>

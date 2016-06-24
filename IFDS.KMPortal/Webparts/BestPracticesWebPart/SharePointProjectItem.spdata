@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="BestPracticesWebPartUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="BestPracticesWebPart\" Type="ElementManifest" />
+    <ProjectItemFile Source="BestPracticesWebPart.webpart" Target="BestPracticesWebPart\" Type="ElementFile" />
+    <ProjectItemFile Source="BestPracticesWebPartUserControl.ascx" Target="CONTROLTEMPLATES\IFDS.KMPortal.Webparts\BestPracticesWebPart\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="IFDS.KMPortal.Webparts.BestPracticesWebPart" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

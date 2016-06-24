@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/windows/2007/BusinessDataCatalog" Name="BDC_CornerStone">
+  <LobSystems>
+    <LobSystem Name="BDC_CornerStone" Type="DotNetAssembly">
+      <LobSystemInstances>
+        <LobSystemInstance Name="BDC_CornerStone">
+          <Properties>
+            <Property Name="ShowInSearchUI" Type="System.Boolean">x</Property>
+          </Properties>
+          </LobSystemInstance>
+      </LobSystemInstances>
+      <Entities>
+        <Entity Name="CornerStone_CourseCatalog" Namespace="IFDS.KMPortal.BDC_CornerStone" EstimatedInstanceCount="1000" Version="1.0.0.45">
+          <Properties>
+            <Property Name="Class" Type="System.String">IFDS.KMPortal.BDC_CornerStone.CornerStone_CourseCatalogService, BDC_CornerStone</Property>
+          </Properties>
+          <Identifiers>
+            <Identifier Name="Title" TypeName="System.String" />
+            <!-- TODO: Change the name of the ID and if needed the TypeName of your identifier. -->
+          </Identifiers>
+          <Methods>
+            <!-- start finder method -->
+            <Method Name="ReadList">
+              <Properties>
+                <Property Name="RootFinder" Type="System.String">Empty</Property>
+              </Properties>
+              <!-- TODO: Change the name of the method if needed. -->
+              <Parameters>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="System.Collections.Generic.IEnumerable`1[[IFDS.KMPortal.BDC_CornerStone.CornerStone_CourseCatalog, BDC_CornerStone]]" IsCollection="true" Name="CourseCatologs">
+                    <TypeDescriptors>
+                      <TypeDescriptor Name="CourseCatolog" TypeName="IFDS.KMPortal.BDC_CornerStone.CornerStone_CourseCatalog, BDC_CornerStone">
+                        <TypeDescriptors>
+                          <TypeDescriptor Name="Title" TypeName="System.String" IdentifierName="Title" />
+                          <TypeDescriptor Name="CreatedDate" TypeName="System.DateTime" IsCollection="false" />
+                          <TypeDescriptor Name="Description" TypeName="System.String" />
+                          <TypeDescriptor Name="SubjectIDs" TypeName="System.String" />
+                          <TypeDescriptor Name="SubjectTitles" TypeName="System.String" />
+                          <TypeDescriptor Name="Price" TypeName="System.Decimal" IsCollection="false" />
+                          <TypeDescriptor Name="Type" TypeName="System.String" />
+                          <TypeDescriptor Name="DeepLinkURL" TypeName="System.String" />
+                          <TypeDescriptor Name="CourseDuration" TypeName="System.String" />
+                          <TypeDescriptor Name="OUAvailability" TypeName="System.String" />
+                          <TypeDescriptor Name="LOTitles" TypeName="System.String" />
+                          <TypeDescriptor Name="LOInstructions" TypeName="System.String" /></TypeDescriptors></TypeDescriptor></TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="Finder" ReturnParameterName="returnParameter" Default="true" Name="ReadList" DefaultDisplayName="Entity1 List">
+                  <Properties>
+                    <Property Name="RootFinder" Type="System.String">Empty</Property>
+                  </Properties>
+                  </MethodInstance>
+              </MethodInstances>
+            </Method>
+            <!-- end finder method -->
+            <!-- start specific finder method -->
+            <Method Name="ReadItem">
+              <Parameters>
+                <Parameter Direction="In" Name="id">
+                  <TypeDescriptor TypeName="System.String" IdentifierName="Title" Name="Title" />
+                </Parameter>
+                <Parameter Direction="Return" Name="returnParameter">
+                  <TypeDescriptor TypeName="IFDS.KMPortal.BDC_CornerStone.CornerStone_CourseCatalog, BDC_CornerStone" Name="CourseCatolog">
+                    <TypeDescriptors>
+                      <TypeDescriptor TypeName="System.String" IdentifierName="Title" Name="Title" />
+                      <TypeDescriptor TypeName="System.DateTime" Name="CreatedDate" IsCollection="false" />
+                      <!-- TODO: Add TypeDescriptors when you add properties to Entity1. -->
+                      <TypeDescriptor Name="Description" TypeName="System.String" />
+                      <TypeDescriptor Name="SubjectIDs" TypeName="System.String" />
+                      <TypeDescriptor Name="SubjectTitles" TypeName="System.String" />
+                      <TypeDescriptor Name="Price" TypeName="System.Decimal" IsCollection="false" />
+                      <TypeDescriptor Name="Type" TypeName="System.String" />
+                      <TypeDescriptor Name="DeepLinkURL" TypeName="System.String" />
+                      <TypeDescriptor Name="CourseDuration" TypeName="System.String" />
+                      <TypeDescriptor Name="OUAvailability" TypeName="System.String" />
+                      <TypeDescriptor Name="LOTitles" TypeName="System.String" />
+                      <TypeDescriptor Name="LOInstructions" TypeName="System.String" /></TypeDescriptors>
+                  </TypeDescriptor>
+                </Parameter>
+              </Parameters>
+              <MethodInstances>
+                <MethodInstance Type="SpecificFinder" ReturnParameterName="returnParameter" Default="true" Name="ReadItem" DefaultDisplayName="Read Entity1" />
+              </MethodInstances>
+            </Method>
+            <!-- end specific finder method -->
+          </Methods>
+        </Entity>
+      </Entities>
+    </LobSystem>
+  </LobSystems>
+</Model>

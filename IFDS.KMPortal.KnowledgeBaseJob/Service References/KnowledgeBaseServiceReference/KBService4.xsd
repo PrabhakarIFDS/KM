@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfThreadMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThreadMember" nillable="true" type="tns:ThreadMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThreadMember" nillable="true" type="tns:ArrayOfThreadMember" />
+  <xs:complexType name="ThreadMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Member">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumID" type="xs:int" />
+          <xs:element minOccurs="0" name="LatestPost" nillable="true" type="tns:PostMember" />
+          <xs:element minOccurs="0" name="Locked" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+          <xs:element minOccurs="0" name="Tags" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThreadID" type="xs:int" />
+          <xs:element minOccurs="0" name="ThreadName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThreadMember" nillable="true" type="tns:ThreadMember" />
+  <xs:complexType name="Member">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Member" nillable="true" type="tns:Member" />
+  <xs:complexType name="PostMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Member">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcceptedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AcceptedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="AcceptedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Attachments" nillable="true" type="tns:ArrayOfAttachmentMember" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumID" type="xs:int" />
+          <xs:element minOccurs="0" name="ForumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPostProposed" type="tns:PostProposedType" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NegativeRate" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfQuotes" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfReplys" type="xs:int" />
+          <xs:element minOccurs="0" name="ParentPost" type="xs:int" />
+          <xs:element minOccurs="0" name="PositiveRate" type="xs:int" />
+          <xs:element minOccurs="0" name="PostContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostID" type="xs:int" />
+          <xs:element minOccurs="0" name="PostName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PostTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProposedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProposedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ProposedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Tags" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ThreadID" type="xs:int" />
+          <xs:element minOccurs="0" name="ThreadName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PostMember" nillable="true" type="tns:PostMember" />
+  <xs:complexType name="ArrayOfAttachmentMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttachmentMember" nillable="true" type="tns:AttachmentMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttachmentMember" nillable="true" type="tns:ArrayOfAttachmentMember" />
+  <xs:complexType name="AttachmentMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttachmentId" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileExtn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttachmentMember" nillable="true" type="tns:AttachmentMember" />
+  <xs:simpleType name="PostProposedType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Proposed" />
+      <xs:enumeration value="Answered" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PostProposedType" nillable="true" type="tns:PostProposedType" />
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="Modified" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DateType" nillable="true" type="tns:DateType" />
+  <xs:complexType name="ArrayOfThreadDisplayMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ThreadDisplayMember" nillable="true" type="tns:ThreadDisplayMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThreadDisplayMember" nillable="true" type="tns:ArrayOfThreadDisplayMember" />
+  <xs:complexType name="ThreadDisplayMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+      <xs:element minOccurs="0" name="PositiveRate" type="xs:int" />
+      <xs:element minOccurs="0" name="ThreadID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThreadName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ThreadDisplayMember" nillable="true" type="tns:ThreadDisplayMember" />
+  <xs:complexType name="ArrayOfCommunityTagMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommunityTagMember" nillable="true" type="tns:CommunityTagMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommunityTagMember" nillable="true" type="tns:ArrayOfCommunityTagMember" />
+  <xs:complexType name="CommunityTagMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Member">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedByUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreatedUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedByUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfThreads" type="xs:int" />
+          <xs:element minOccurs="0" name="TagDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TagID" type="xs:int" />
+          <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommunityTagMember" nillable="true" type="tns:CommunityTagMember" />
+  <xs:complexType name="AttachmentMemberFile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AttachmentMember">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileContent" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttachmentMemberFile" nillable="true" type="tns:AttachmentMemberFile" />
+  <xs:complexType name="ArrayOfPostMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostMember" nillable="true" type="tns:PostMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostMember" nillable="true" type="tns:ArrayOfPostMember" />
+  <xs:complexType name="ArrayOfPostUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostUser" nillable="true" type="tns:PostUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPostUser" nillable="true" type="tns:ArrayOfPostUser" />
+  <xs:complexType name="PostUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostUser" nillable="true" type="tns:PostUser" />
+  <xs:complexType name="ArrayOfTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tag" nillable="true" type="tns:Tag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTag" nillable="true" type="tns:ArrayOfTag" />
+  <xs:complexType name="Tag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedbyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedbyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedbyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiedbyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagId" type="xs:int" />
+      <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weight" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tag" nillable="true" type="tns:Tag" />
+  <xs:complexType name="ArrayOfHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="History" nillable="true" type="tns:History" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistory" nillable="true" type="tns:ArrayOfHistory" />
+  <xs:complexType name="History">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedbyID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedbyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="History" nillable="true" type="tns:History" />
+  <xs:complexType name="ArrayOfForumCategoryMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ForumCategoryMember" nillable="true" type="tns:ForumCategoryMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfForumCategoryMember" nillable="true" type="tns:ArrayOfForumCategoryMember" />
+  <xs:complexType name="ForumCategoryMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Member">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CatID" type="xs:int" />
+          <xs:element minOccurs="0" name="CatName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NumberOfForums" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForumCategoryMember" nillable="true" type="tns:ForumCategoryMember" />
+  <xs:simpleType name="ForumStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Closed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FutureClose">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ForumStatus" nillable="true" type="tns:ForumStatus" />
+  <xs:complexType name="ForumMember">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Member">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CatID" type="xs:int" />
+          <xs:element minOccurs="0" name="CatName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CustomMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumClosedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumClosedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ForumClosedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ForumDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumID" type="xs:int" />
+          <xs:element minOccurs="0" name="ForumName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumReOpenedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ForumReOpenedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ForumReOpenedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ForumType" type="tns:ForumStatus" />
+          <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModifiedByUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberOfThreads" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForumMember" nillable="true" type="tns:ForumMember" />
+  <xs:complexType name="ArrayOfForumMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ForumMember" nillable="true" type="tns:ForumMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfForumMember" nillable="true" type="tns:ArrayOfForumMember" />
+  <xs:complexType name="ArrayOfForumDisplayMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ForumDisplayMember" nillable="true" type="tns:ForumDisplayMember" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfForumDisplayMember" nillable="true" type="tns:ArrayOfForumDisplayMember" />
+  <xs:complexType name="ForumDisplayMember">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ForumID" type="xs:int" />
+      <xs:element minOccurs="0" name="ForumName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfPosts" type="xs:int" />
+      <xs:element minOccurs="0" name="PositiveRate" type="xs:int" />
+      <xs:element minOccurs="0" name="ThreadID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThreadName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ForumDisplayMember" nillable="true" type="tns:ForumDisplayMember" />
+</xs:schema>

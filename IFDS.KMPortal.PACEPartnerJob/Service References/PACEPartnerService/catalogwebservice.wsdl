@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cornerstoneondemand.com/Webservices/Catalog" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cornerstoneondemand.com/Webservices/Catalog" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cornerstoneondemand.com/Webservices/Catalog">
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="tns:CatalogSearchQuery" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CatalogSearchQuery">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocationOuIds" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Provider" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Competencies" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CatalogType" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocatorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locations" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Instructor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedDateStart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedDateEnd" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CatalogType">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="ONLINE" />
+              <s:enumeration value="EVENT" />
+              <s:enumeration value="QUICKCOURSE" />
+              <s:enumeration value="CURRICULUM" />
+              <s:enumeration value="TEST" />
+              <s:enumeration value="SESSION" />
+              <s:enumeration value="LIBRARY" />
+              <s:enumeration value="POSTING" />
+              <s:enumeration value="MATERIAL" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult" type="tns:CatalogSearchResultMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CatalogSearchResultMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Results" type="tns:ArrayOfCatalogSearchResult" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCatalogSearchResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CatalogSearchResult" nillable="true" type="tns:CatalogSearchResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CatalogSearchResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Fields" type="tns:ArrayOfField" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoSubjectList" type="tns:ArrayOfLoSubject" />
+          <s:element minOccurs="0" maxOccurs="1" name="Availabilities" type="tns:ArrayOfAvailability" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseTitle" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CatalogType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProviderName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Field" nillable="true" type="tns:Field" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Field">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLoSubject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoSubject" nillable="true" type="tns:LoSubject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoSubject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SubjectWithHierarchy" type="tns:ArrayOfSubject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSubject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Subject" nillable="true" type="tns:Subject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Subject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TitleWithHierarchy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentTitle" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAvailability">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Availability" nillable="true" type="tns:Availability" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Availability">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncludeSubs" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserAvailability">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Availability" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="OUAvailability">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Availability">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AuthHeader" type="tns:AuthHeader" />
+      <s:complexType name="AuthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CorpName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HeaderSalt" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchAuthHeader">
+    <wsdl:part name="AuthHeader" element="tns:AuthHeader" />
+  </wsdl:message>
+  <wsdl:portType name="CatalogwebserviceSoap">
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CatalogwebserviceSoap" type="tns:CatalogwebserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://www.cornerstoneondemand.com/Webservices/Catalog/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CatalogwebserviceSoap12" type="tns:CatalogwebserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="http://www.cornerstoneondemand.com/Webservices/Catalog/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchAuthHeader" part="AuthHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Catalogwebservice">
+    <wsdl:port name="CatalogwebserviceSoap" binding="tns:CatalogwebserviceSoap">
+      <soap:address location="https://ws-ifdsgroup-pilot.csod.com/webservices/catalog/catalogwebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CatalogwebserviceSoap12" binding="tns:CatalogwebserviceSoap12">
+      <soap12:address location="https://ws-ifdsgroup-pilot.csod.com/webservices/catalog/catalogwebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

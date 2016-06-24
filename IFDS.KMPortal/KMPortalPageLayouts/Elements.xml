@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="KMPortalPageLayouts" Url ="_Catalogs/masterpage">
+    <File Path="KMPortalPageLayouts\KMPortalPageLayout.aspx"  Url="KMPortalPageLayout.aspx" Type ="GhostableInLibrary" >
+
+    <Property Name="Title" Value="KMPortal PageLayout"></Property>
+    <Property Name="KMPortal PageLayout" Value="KMPortal PageLayout" />
+    <Property Name="UIVersion" Value="15" />
+    <Property Name="PublishingHidden" Value="FALSE" />
+    <Property Name="HtmlDesignAssociated" Value="FALSE" />
+    <Property Name="ContentType" Value="Page Layout" />
+    <Property Name="_ModerationStatus" Value="3" />
+    <Property Name="FileDirRef" Value="_catalogs/masterpage" />
+    <Property Name="FSObjType" Value="0" />
+    </File>
+    
+    <File Path="KMPortalPageLayouts\KMPortalDepartmentPageLayout.aspx" Url="KMPortalDepartmentPageLayout.aspx" Type="GhostableInLibrary" >
+      
+      <Property Name="Title" Value="KMPortal Department PageLayout"></Property>
+      <Property Name="KMPortal PageLayout" Value="KMPortal Department PageLayout" />
+      <Property Name="UIVersion" Value="15" />
+      <Property Name="PublishingHidden" Value="FALSE" />
+      <Property Name="HtmlDesignAssociated" Value="FALSE" />
+      <Property Name="ContentType" Value="Page Layout" />
+      <Property Name="_ModerationStatus" Value="3" />
+      <Property Name="FileDirRef" Value="_catalogs/masterpage" />
+      <Property Name="FSObjType" Value="0" />
+      
+    </File>
+    <File Path="KMPortalPageLayouts\KMPortalEnhancedPageLayout.aspx" Url="KMPortalEnhancedPageLayout.aspx" Type="GhostableInLibrary" >
+      <Property Name="Title" Value="KMPortal Enhanced PageLayout"></Property>
+      <Property Name="KMPortal PageLayout" Value="KMPortal Enhanced PageLayout" />
+      <Property Name="UIVersion" Value="15" />
+      <Property Name="PublishingHidden" Value="FALSE" />
+      <Property Name="HtmlDesignAssociated" Value="FALSE" />
+      <Property Name="ContentType" Value="Page Layout" />
+      <Property Name="_ModerationStatus" Value="3" />
+      <Property Name="FileDirRef" Value="_catalogs/masterpage" />
+      <Property Name="FSObjType" Value="0" />      
+    </File>
+    <File Path="KMPortalPageLayouts\KMPortalDepartmentEnhancedPageLayout.aspx" Url="KMPortalDepartmentEnhancedPageLayout.aspx" Type="GhostableInLibrary" >
+      <Property Name="Title" Value="KMPortal Department Enhanced PageLayout"></Property>
+      <Property Name="KMPortal PageLayout" Value="KMPortal Department Enhanced PageLayout" />
+      <Property Name="UIVersion" Value="15" />
+      <Property Name="PublishingHidden" Value="FALSE" />
+      <Property Name="HtmlDesignAssociated" Value="FALSE" />
+      <Property Name="ContentType" Value="Page Layout" />
+      <Property Name="_ModerationStatus" Value="3" />
+      <Property Name="FileDirRef" Value="_catalogs/masterpage" />
+      <Property Name="FSObjType" Value="0" />
+
+    </File>
+  </Module>
+</Elements>

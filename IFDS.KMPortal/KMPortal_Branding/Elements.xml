@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="KMPortal_Branding"  Url ="Style Library" RootWebOnly ="TRUE">
+    <File Path="KMPortal_Branding\JS\app.js" Url="KMPortal_Branding/JS/app.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\app.min.js" Url="KMPortal_Branding/JS/app.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE"/>
+    <File Path="KMPortal_Branding\JS\bootstrap.js" Url="KMPortal_Branding/JS/bootstrap.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE"/>
+    <File Path="KMPortal_Branding\JS\bootstrap.min.js" Url="KMPortal_Branding/JS/bootstrap.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery.mCustomScrollbar.concat.min.js" Url="KMPortal_Branding/JS/jquery.mCustomScrollbar.concat.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\bootstrap.css" Url="KMPortal_Branding/CSS/bootstrap.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\bootstrap.min.css" Url="KMPortal_Branding/CSS/bootstrap.min.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\CustomScrollbar.css" Url="KMPortal_Branding/CSS/CustomScrollbar.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\CustomScrollbar.min.css" Url="KMPortal_Branding/CSS/CustomScrollbar.min.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\global.css" Url="KMPortal_Branding/CSS/global.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\global.min.css" Url="KMPortal_Branding/CSS/global.min.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\mCSB_buttons.png" Url="KMPortal_Branding/CSS/mCSB_buttons.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\glyphicons-halflings-regular.eot" Url="KMPortal_Branding/Fonts/glyphicons-halflings-regular.eot" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\glyphicons-halflings-regular.ttf" Url="KMPortal_Branding/Fonts/glyphicons-halflings-regular.ttf" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\glyphicons-halflings-regular.woff" Url="KMPortal_Branding/Fonts/glyphicons-halflings-regular.woff" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\glyphicons-halflings-regular.woff2" Url="KMPortal_Branding/Fonts/glyphicons-halflings-regular.woff2" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-bold-webfont.eot" Url="KMPortal_Branding/Fonts/opensans-bold-webfont.eot"  Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-bold-webfont.ttf" Url="KMPortal_Branding/Fonts/opensans-bold-webfont.ttf" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-bold-webfont.woff" Url="KMPortal_Branding/Fonts/opensans-bold-webfont.woff"  Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-bold-webfont.woff2" Url="KMPortal_Branding/Fonts/opensans-bold-webfont.woff2" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-light-webfont.eot" Url="KMPortal_Branding/Fonts/opensans-light-webfont.eot" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-light-webfont.ttf" Url="KMPortal_Branding/Fonts/opensans-light-webfont.ttf" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE"/>
+    <File Path="KMPortal_Branding\Fonts\opensans-light-webfont.woff" Url="KMPortal_Branding/Fonts/opensans-light-webfont.woff" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\opensans-light-webfont.woff2" Url="KMPortal_Branding/Fonts/opensans-light-webfont.woff2" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\icons.png" Url="KMPortal_Branding/Images/icons.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery.SPServices2013.01.min.js" Url="KMPortal_Branding/JS/jquery.SPServices2013.01.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery-1.11.1.js" Url="KMPortal_Branding/JS/jquery-1.11.1.js" Type ="GhostableInLibrary"  Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\Notifications.js" Url="KMPortal_Branding/JS/Notifications.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\a5.jpg" Url="KMPortal_Branding/Images/a5.jpg" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\animated-overlayNew.gif" Url="KMPortal_Branding/Images/animated-overlayNew.gif" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\check_radio.png" Url="KMPortal_Branding/Images/check_radio.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\dwn-aerow.png" Url="KMPortal_Branding/Images/dwn-aerow.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\logo.png" Url="KMPortal_Branding/Images/logo.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\mCSB_buttons.png" Url="KMPortal_Branding/Images/mCSB_buttons.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\note-icon.png" Url="KMPortal_Branding/Images/note-icon.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\top-icon.png" Url="KMPortal_Branding/Images/top-icon.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_flat_0_aaaaaa_40x100.png" Url="KMPortal_Branding/Images/ui-bg_flat_0_aaaaaa_40x100.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_flat_75_ffffff_40x100.png" Url="KMPortal_Branding/Images/ui-bg_flat_75_ffffff_40x100.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_glass_55_fbf9ee_1x400.png" Url="KMPortal_Branding/Images/ui-bg_glass_55_fbf9ee_1x400.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_glass_65_ffffff_1x400.png" Url="KMPortal_Branding/Images/ui-bg_glass_65_ffffff_1x400.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_glass_75_dadada_1x400.png" Url="KMPortal_Branding/Images/ui-bg_glass_75_dadada_1x400.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_glass_75_e6e6e6_1x400.png" Url="KMPortal_Branding/Images/ui-bg_glass_75_e6e6e6_1x400.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_glass_95_fef1ec_1x400.png" Url="KMPortal_Branding/Images/ui-bg_glass_95_fef1ec_1x400.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" Url="KMPortal_Branding/Images/ui-bg_highlight-soft_75_cccccc_1x100.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-icons_2e83ff_256x240.png" Url="KMPortal_Branding/Images/ui-icons_2e83ff_256x240.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-icons_222222_256x240.png" Url="KMPortal_Branding/Images/ui-icons_222222_256x240.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-icons_454545_256x240.png" Url="KMPortal_Branding/Images/ui-icons_454545_256x240.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-icons_888888_256x240.png" Url="KMPortal_Branding/Images/ui-icons_888888_256x240.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\ui-icons_cd0a0a_256x240.png" Url="KMPortal_Branding/Images/ui-icons_cd0a0a_256x240.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\icon_discuss.png" Url="KMPortal_Branding/Images/icon_discuss.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\icon_faq.png" Url="KMPortal_Branding/Images/icon_faq.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\icon_favourite2.png" Url="KMPortal_Branding/Images/icon_favourite2.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\icon_top.png" Url="KMPortal_Branding/Images/icon_top.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\jquery-ui.css" Url="KMPortal_Branding/CSS/jquery-ui.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\CSS\ui.jqgrid.css" Url="KMPortal_Branding/CSS/ui.jqgrid.css" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Fonts\glyphicons-halflings-regular.svg" Url="KMPortal_Branding/Fonts/glyphicons-halflings-regular.svg" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\bootstrap-treeview.js" Url="KMPortal_Branding/JS/bootstrap-treeview.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\bootstrap-treeview.min.js" Url="KMPortal_Branding/JS/bootstrap-treeview.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\grid.locale-en.js" Url="KMPortal_Branding/JS/grid.locale-en.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery.jqGrid.js" Url="KMPortal_Branding/JS/jquery.jqGrid.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery.jqGrid.min.js" Url="KMPortal_Branding/JS/jquery.jqGrid.min.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\JS\jquery-ui.js" Url="KMPortal_Branding/JS/jquery-ui.js" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="KMPortal_Branding\Images\KMPortal_Logo.png" Url="KMPortal_Branding/Images/KMPortal_Logo.png" Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE"  />
+    <File Path="KMPortal_Branding\Images\NewGearIcon.png" Url="KMPortal_Branding/Images/NewGearIcon.png"  Type ="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

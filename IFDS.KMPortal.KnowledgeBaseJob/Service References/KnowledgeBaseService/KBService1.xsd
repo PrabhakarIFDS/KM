@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KnowledgeBase.Wiki" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KnowledgeBase.Wiki" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kbapi-ifds.kb.net/KBService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/KnowledgeBase" />
+  <xs:complexType name="ArrayOfWiki">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Wiki" nillable="true" type="tns:Wiki" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWiki" nillable="true" type="tns:ArrayOfWiki" />
+  <xs:complexType name="Wiki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckOut" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckOutDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CheckOutFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckOutLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckOutUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Createdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifyFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Modifydate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatAveRating" type="xs:int" />
+      <xs:element minOccurs="0" name="StatRateCount" type="xs:int" />
+      <xs:element minOccurs="0" name="SttatHitCount" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/KnowledgeBase" minOccurs="0" name="Tags" nillable="true" type="q1:ArrayOfTag" />
+      <xs:element minOccurs="0" name="Template" nillable="true" type="tns:Template" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Viewdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WikiContents" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WikiID" type="xs:int" />
+      <xs:element minOccurs="0" name="WikiVersions" nillable="true" type="tns:ArrayOfWikiVersion" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/KnowledgeBase" minOccurs="0" name="_tags" nillable="true" type="q2:ArrayOfTag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Wiki" nillable="true" type="tns:Wiki" />
+  <xs:complexType name="Template">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateSections" nillable="true" type="tns:ArrayOfTemplateSection" />
+      <xs:element minOccurs="0" name="TemplateTag" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Template" nillable="true" type="tns:Template" />
+  <xs:complexType name="ArrayOfTemplateSection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TemplateSection" nillable="true" type="tns:TemplateSection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplateSection" nillable="true" type="tns:ArrayOfTemplateSection" />
+  <xs:complexType name="TemplateSection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultStyle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayTitle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Required" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateBodyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateSectionID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateSection" nillable="true" type="tns:TemplateSection" />
+  <xs:complexType name="ArrayOfWikiVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WikiVersion" nillable="true" type="tns:WikiVersion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWikiVersion" nillable="true" type="tns:ArrayOfWikiVersion" />
+  <xs:complexType name="WikiVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedInPortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedUserID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedUserType" type="xs:int" />
+      <xs:element minOccurs="0" name="Createdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileExt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="Version" type="xs:int" />
+      <xs:element minOccurs="0" name="VersionMinor" type="xs:int" />
+      <xs:element minOccurs="0" name="WikiFileID" type="xs:int" />
+      <xs:element minOccurs="0" name="WikiID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WikiVersion" nillable="true" type="tns:WikiVersion" />
+  <xs:complexType name="ArrayOfTemplate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Template" nillable="true" type="tns:Template" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplate" nillable="true" type="tns:ArrayOfTemplate" />
+  <xs:complexType name="WikiPortalConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessWiki" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedByDateFilterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatedByUsers" nillable="true" type="tns:ArrayOfUser" />
+      <xs:element minOccurs="0" name="CreatedPortals" nillable="true" type="tns:ArrayOfPortal" />
+      <xs:element minOccurs="0" name="CreatedTemplateFliterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatedTemplates" nillable="true" type="tns:ArrayOfTemplate" />
+      <xs:element minOccurs="0" name="CreatedUserFliterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatedUserProfiles" nillable="true" type="tns:ArrayOfUserProfile" />
+      <xs:element minOccurs="0" name="EnableTag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxTagCloudDisplay" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiedByDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedByDateFilterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalFliterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PortalID" type="xs:int" />
+      <xs:element minOccurs="0" name="Rating" type="xs:int" />
+      <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:ArrayOfTemplate" />
+      <xs:element minOccurs="0" name="UserProfileFliterEnable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WikiPortalConfigID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WikiPortalConfig" nillable="true" type="tns:WikiPortalConfig" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" type="xs:int" />
+      <xs:element minOccurs="0" name="userID" type="xs:int" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfPortal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Portal" nillable="true" type="tns:Portal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortal" nillable="true" type="tns:ArrayOfPortal" />
+  <xs:complexType name="Portal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="portalID" type="xs:int" />
+      <xs:element minOccurs="0" name="portalName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Portal" nillable="true" type="tns:Portal" />
+  <xs:complexType name="ArrayOfUserProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserProfile" nillable="true" type="tns:UserProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserProfile" nillable="true" type="tns:ArrayOfUserProfile" />
+  <xs:complexType name="UserProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profileID" type="xs:int" />
+      <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="profileType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserProfile" nillable="true" type="tns:UserProfile" />
+  <xs:complexType name="WikiUserActivityReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
+      <xs:element minOccurs="0" name="PortalId" type="xs:int" />
+      <xs:element minOccurs="0" name="SearchId" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="VisitEndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VisitStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Visittime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WikiID" type="xs:int" />
+      <xs:element minOccurs="0" name="searchid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WikiUserActivityReport" nillable="true" type="tns:WikiUserActivityReport" />
+</xs:schema>

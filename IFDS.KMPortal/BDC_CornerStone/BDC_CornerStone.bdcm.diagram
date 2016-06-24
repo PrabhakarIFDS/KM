@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BDC_CornerStone">
+  <modelRootMoniker Name="/BDC_CornerStone" />
+  <nestedChildShapes>
+    <entityShape Id="3aedef18-0d79-43c0-9a0e-22fa5da89c33" absoluteBounds="0.5, 1.375, 1.5, 1.427958984375">
+      <entityMoniker name="IFDS.KMPortal.BDC_CornerStone.CornerStone_CourseCatalog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37e91ea9-3791-4fe8-ae10-8a9f2e28e8fa" absoluteBounds="0.515, 1.7850000000000001, 1.4700000000000002, 0.37180582682291663" name="Identifiers" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6d5608e4-7927-4eaa-8af1-c2fb15bf631e" absoluteBounds="0.515, 2.1668058268229169, 1.4700000000000002, 0.53615315755208326" name="Methods" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="DiscussionListWebPartUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="DiscussionListWebPart\" Type="ElementManifest" />
+    <ProjectItemFile Source="DiscussionListWebPart.webpart" Target="DiscussionListWebPart\" Type="ElementFile" />
+    <ProjectItemFile Source="DiscussionListWebPartUserControl.ascx" Target="CONTROLTEMPLATES\IFDS.KMPortal.Webparts\DiscussionListWebPart\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="IFDS.KMPortal.Webparts.DiscussionListWebPart" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82542A5A-FC79-4688-BF1D-3D8FB1D622EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IFDS.KMPortal</RootNamespace>
+    <AssemblyName>IFDS.KMPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.Office.Server.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Taxonomy, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\C#\Bin\Net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDC_CornerStone\CornerStone_CourseCatalog.cs" />
+    <Compile Include="BDC_CornerStone\CornerStone_CourseCatalogService.cs" />
+    <Compile Include="ControlTemplates\IFDS.KMPortal\ProductsNavigation.ascx.cs">
+      <DependentUpon>ProductsNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\IFDS.KMPortal\ProductsNavigation.ascx.designer.cs">
+      <DependentUpon>ProductsNavigation.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlTemplates\IFDS.KMPortal\TaxonomyNavigation.ascx.cs">
+      <DependentUpon>TaxonomyNavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\IFDS.KMPortal\TaxonomyNavigation.ascx.designer.cs">
+      <DependentUpon>TaxonomyNavigation.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\IFDS.KMPortal\WebMethodHelper.aspx.cs">
+      <DependentUpon>WebMethodHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\IFDS.KMPortal\WebMethodHelper.aspx.designer.cs">
+      <DependentUpon>WebMethodHelper.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiscussionItemInfo.cs" />
+    <Compile Include="Features\IFDS.KMPortal ContentTypes\IFDS.KMPortal ContentTypes.EventReceiver.cs">
+      <DependentUpon>IFDS.KMPortal ContentTypes.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\IFDS.KMPortal Lists\IFDS.EventReceiver.cs">
+      <DependentUpon>IFDS.KMPortal Lists.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\IFDS.KMPortal SiteSetup\IFDS.EventReceiver.cs">
+      <DependentUpon>IFDS.KMPortal SiteSetup.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CacheHelper.cs" />
+    <Compile Include="Helper\CommonHelper.cs" />
+    <Compile Include="Helper\Constants.cs" />
+    <Compile Include="Helper\Logger.cs" />
+    <Compile Include="Layouts\IFDS.KMPortal\ViewAllRecentDocs.aspx.cs">
+      <DependentUpon>ViewAllRecentDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\IFDS.KMPortal\ViewAllRecentDocs.aspx.designer.cs">
+      <DependentUpon>ViewAllRecentDocs.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\IFDS.KMPortal\WebMethodPage.aspx.cs">
+      <DependentUpon>WebMethodPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\IFDS.KMPortal\WebMethodPage.aspx.designer.cs">
+      <DependentUpon>WebMethodPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiscussionRecentItemInfo.cs" />
+    <Compile Include="Models\FAQRecentItemInfo.cs" />
+    <Compile Include="Models\FAQItemInfo.cs" />
+    <Compile Include="Models\ItemInfo.cs" />
+    <Compile Include="Models\MyFavItemInfo.cs" />
+    <Compile Include="Models\NewsItemInfo.cs" />
+    <Compile Include="Models\TopContributors.cs" />
+    <Compile Include="Models\TopLearnersTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopContributors-Global Remote Timerjob\RemoteTimerjob.cs" />
+    <Compile Include="Webparts\BestPracticesWebPart\BestPracticesWebPart.cs" />
+    <Compile Include="Webparts\BestPracticesWebPart\BestPracticesWebPartUserControl.ascx.cs">
+      <DependentUpon>BestPracticesWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\BestPracticesWebPart\BestPracticesWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>BestPracticesWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\DiscussionListWebPart\DiscussionListWebPart.cs" />
+    <Compile Include="Webparts\DiscussionListWebPart\DiscussionListWebPartUserControl.ascx.cs">
+      <DependentUpon>DiscussionListWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\DiscussionListWebPart\DiscussionListWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>DiscussionListWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\FAQWebPart\FAQWebPart.cs" />
+    <Compile Include="Webparts\FAQWebPart\FAQWebPartUserControl.ascx.cs">
+      <DependentUpon>FAQWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\FAQWebPart\FAQWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>FAQWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\FrequentlyUsedDocsWebPart\FrequentlyUsedDocsWebPart.ascx.cs">
+      <DependentUpon>FrequentlyUsedDocsWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\FrequentlyUsedDocsWebPart\FrequentlyUsedDocsWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrequentlyUsedDocsWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\KMPortalMyFavouriteWebPart\KMPortalMyFavouriteWebPart.cs" />
+    <Compile Include="Webparts\KMPortalMyFavouriteWebPart\KMPortalMyFavouriteWebPartUserControl.ascx.cs">
+      <DependentUpon>KMPortalMyFavouriteWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\KMPortalMyFavouriteWebPart\KMPortalMyFavouriteWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>KMPortalMyFavouriteWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\KMPortalSearchBoxWebPart\KMPortalSearchBoxWebPart.cs" />
+    <Compile Include="Webparts\KMPortalSearchBoxWebPart\KMPortalSearchBoxWebPartUserControl.ascx.cs">
+      <DependentUpon>KMPortalSearchBoxWebPartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\KMPortalSearchBoxWebPart\KMPortalSearchBoxWebPartUserControl.ascx.designer.cs">
+      <DependentUpon>KMPortalSearchBoxWebPartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\NewsWebpart\NewsWebpart.cs" />
+    <Compile Include="Webparts\NewsWebpart\NewsWebpartUserControl.ascx.cs">
+      <DependentUpon>NewsWebpartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webparts\NewsWebpart\NewsWebpartUserControl.ascx.designer.cs">
+      <DependentUpon>NewsWebpartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\RecentDocumentsWebPart\RecentDocumentsWebPart.ascx.cs">
+      <DependentUpon>RecentDocumentsWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\RecentDocumentsWebPart\RecentDocumentsWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecentDocumentsWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\TopCandLWebPart\TopCandLWebPart.ascx.cs">
+      <DependentUpon>TopCandLWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Webparts\TopCandLWebPart\TopCandLWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopCandLWebPart.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BDC_CornerStone\BDC_CornerStone.bdcm" />
+    <None Include="BDC_CornerStone\BDC_CornerStone.bdcm.diagram">
+      <DependentUpon>BDC_CornerStone.bdcm</DependentUpon>
+    </None>
+    <None Include="BDC_CornerStone\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{35218014-1c89-499f-9b0d-2a3fca9458ff}</SharePointProjectItemId>
+    </None>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{82888391-3ab9-43bb-be90-c1581379287e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\IFDS.KMPortal GlobalHomePage\IFDS.KMPortal GlobalHomePage.feature">
+      <FeatureId>{41fb64d0-b9ec-4d47-b14f-385f773b66bd}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal DepartmentHomePage\IFDS.KMPortal DepartmentHomePage.feature">
+      <FeatureId>{16401314-1d9a-472d-9230-2185d7d4db14}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal SiteSetup\IFDS.KMPortal SiteSetup.feature">
+      <FeatureId>{47b3870b-b0fc-4870-968c-2a61b5c7710c}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal PageLayouts\IFDS.KMPortal PageLayouts.feature">
+      <FeatureId>{cb484e54-ea0b-466b-893d-05341113b6f4}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal MasterPage\IFDS.KMPortal MasterPage.feature">
+      <FeatureId>{8dcf54b9-8d80-4a12-b08a-03ac7a7179a0}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal Webparts\IFDS.KMPortal Webparts.feature">
+      <FeatureId>{6a42828c-04ac-4a0f-b9a7-f126a2f0cffe}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal Branding\IFDS.KMPortal Branding.feature">
+      <FeatureId>{c4f53cbb-c7c5-424b-8798-0f784c7409f5}</FeatureId>
+    </None>
+    <None Include="KMPortal_Branding\Fonts\glyphicons-halflings-regular.eot" />
+    <None Include="KMPortal_Branding\Fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="KMPortal_Branding\Fonts\glyphicons-halflings-regular.woff" />
+    <None Include="KMPortal_Branding\Fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="KMPortal_Branding\Fonts\opensans-bold-webfont.eot" />
+    <None Include="KMPortal_Branding\Fonts\opensans-bold-webfont.ttf" />
+    <None Include="KMPortal_Branding\Fonts\opensans-bold-webfont.woff" />
+    <None Include="KMPortal_Branding\Fonts\opensans-bold-webfont.woff2" />
+    <None Include="KMPortal_Branding\Fonts\opensans-light-webfont.eot" />
+    <None Include="KMPortal_Branding\Fonts\opensans-light-webfont.ttf" />
+    <None Include="KMPortal_Branding\Fonts\opensans-light-webfont.woff" />
+    <None Include="KMPortal_Branding\Fonts\opensans-light-webfont.woff2" />
+    <None Include="KMPortal_Branding\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c9741d26-06e5-4dcc-b794-3937bdd39997}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\Best Practices\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0297830-45fb-484b-996a-103428ed8e4d}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\FAQ\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75c7fc37-0cf5-4920-8bf5-2cc43283da03}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\IFDS.KMPortal ContentTypes\IFDS.KMPortal ContentTypes.feature">
+      <FeatureId>{e6834154-1a7a-49c3-b08e-613013fc13bb}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal Lists\IFDS.KMPortal Lists.feature">
+      <FeatureId>{8601b73a-728b-4904-a12e-2f44a7d9eace}</FeatureId>
+    </None>
+    <None Include="Features\IFDS.KMPortal BDC_CornerStone\IFDS.KMPortal BDC_CornerStone.feature">
+      <FeatureId>{7f746b07-1614-4868-981d-791190368e0a}</FeatureId>
+    </None>
+    <None Include="KMPortal_DepartmentHomePage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{301d2f11-e1ea-46d3-9de0-4f972a8ce3b8}</SharePointProjectItemId>
+    </None>
+    <None Include="KMPortal_GlobalHomePage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9ca9e2f2-453e-4a0a-8761-8f740ac1a11b}</SharePointProjectItemId>
+    </None>
+    <None Include="KMPortal_MasterPage\KMMaster.master" />
+    <None Include="KMPortal_MasterPage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5ab0fa78-2c28-4288-af47-436ce1999b65}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\KM\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\KM\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\KM\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Layouts\KM\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Layouts\KM\fonts\MYRIADPRO-BOLD.OTF" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Bold_gdi.eot" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Bold_gdi.ttf" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Bold_gdi.woff" />
+    <None Include="Layouts\KM\fonts\MYRIADPRO-REGULAR.OTF" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Regular_gdi.eot" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Regular_gdi.ttf" />
+    <None Include="Layouts\KM\fonts\MyriadPro-Regular_gdi.woff" />
+    <None Include="Layouts\KM\fonts\MYRIADPRO-SEMIBOLD.OTF" />
+    <None Include="Layouts\KM\fonts\opensans-bold-webfont.eot" />
+    <None Include="Layouts\KM\fonts\opensans-bold-webfont.ttf" />
+    <None Include="Layouts\KM\fonts\opensans-bold-webfont.woff" />
+    <None Include="Layouts\KM\fonts\opensans-bold-webfont.woff2" />
+    <None Include="Layouts\KM\fonts\opensans-light-webfont.eot" />
+    <None Include="Layouts\KM\fonts\opensans-light-webfont.ttf" />
+    <None Include="Layouts\KM\fonts\opensans-light-webfont.woff" />
+    <None Include="Layouts\KM\fonts\opensans-light-webfont.woff2" />
+    <None Include="Lists\Best Practices\Best Practices Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4fce269-8c40-449b-ade3-f0d9db86ad3d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Best Practices\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cec871a0-14da-4b38-8b56-d94866439ab3}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\FAQ\FAQInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b537b934-df7d-4712-8257-8cec75319f84}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\FAQ\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a3eceed6-80bc-459e-be0b-0e11c7c263d9}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Onboarding Documents\Onboarding Documents Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4df15d81-4439-4d56-afb8-e07f9b3d07f3}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Onboarding Documents\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{345a1d86-24a2-41c0-8c07-e1e07bb25e93}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Templates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{75190d90-c70e-4eb5-bd04-b96d8b4f3b33}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Templates\TemplatesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{858d8a15-0d91-443d-b5d0-ba7da3559917}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="SiteColumns\IFDS KMPortal Site Columns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{83a3c57b-72b9-408c-84f6-d7059d3858d2}</SharePointProjectItemId>
+    </None>
+    <None Include="IFDSKMPORTAL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cbc03495-797b-44cc-a10f-5605997c86ce}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f4d476c1-b9a5-403a-b006-a58b2fb6a60e}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\Onboarding Documents\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{aa215f84-4ca7-41d5-b27b-c8067c64fe22}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{52c71ad6-726e-4bc6-b893-bbf140be0cbf}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KMPortalPageLayouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d50ef289-e312-4388-88b3-f135296e5763}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\Templates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0993befe-84c8-4bb6-94aa-609205e4f917}</SharePointProjectItemId>
+    </None>
+    <None Include="TopContributors-Global Remote Timerjob\App.config" />
+    <None Include="Webparts\BestPracticesWebPart\BestPracticesWebPart.webpart" />
+    <None Include="Webparts\BestPracticesWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{15aca04d-b9da-435e-917a-d5b3deb751f8}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\DiscussionListWebPart\DiscussionListWebPart.webpart" />
+    <None Include="Webparts\DiscussionListWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{23fe9afe-5488-4718-9da5-ea3bc6c4b197}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\FAQWebPart\FAQWebPart.webpart" />
+    <None Include="Webparts\FAQWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cc95007c-bb52-4e7e-a52a-84a690e5e4d9}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\FrequentlyUsedDocsWebPart\FrequentlyUsedDocsWebPart.webpart" />
+    <None Include="Webparts\FrequentlyUsedDocsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2fb8f607-de24-4904-9c83-973a07c76640}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\KMPortalMyFavouriteWebPart\KMPortalMyFavouriteWebPart.webpart" />
+    <None Include="Webparts\KMPortalMyFavouriteWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5716a272-8e7f-4684-8bdd-2affd613a952}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\KMPortalSearchBoxWebPart\KMPortalSearchBoxWebPart.webpart" />
+    <None Include="Webparts\KMPortalSearchBoxWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{64d31ecf-57ff-4ec6-812e-ef474e9ee5fa}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\NewsWebpart\NewsWebpart.webpart" />
+    <None Include="Webparts\NewsWebpart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbccdf5a-6985-4775-ab49-871c203bf4d3}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\RecentDocumentsWebPart\RecentDocumentsWebPart.webpart" />
+    <None Include="Webparts\RecentDocumentsWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c97f4f2e-80c9-4fd0-8b7e-fe8d1664f810}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\TopCandLWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c314d8fc-8d96-480d-883c-88881601c402}</SharePointProjectItemId>
+    </None>
+    <None Include="Webparts\TopCandLWebPart\TopCandLWebPart.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\IFDS.KMPortal\ProductsNavigation.ascx" />
+    <Content Include="ControlTemplates\IFDS.KMPortal\TaxonomyNavigation.ascx" />
+    <Content Include="Features\IFDS.KMPortal GlobalHomePage\IFDS.KMPortal GlobalHomePage.Template.xml">
+      <DependentUpon>IFDS.KMPortal GlobalHomePage.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal DepartmentHomePage\IFDS.KMPortal DepartmentHomePage.Template.xml">
+      <DependentUpon>IFDS.KMPortal DepartmentHomePage.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal SiteSetup\IFDS.KMPortal SiteSetup.Template.xml">
+      <DependentUpon>IFDS.KMPortal SiteSetup.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal PageLayouts\IFDS.KMPortal PageLayouts.Template.xml">
+      <DependentUpon>IFDS.KMPortal PageLayouts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal MasterPage\IFDS.KMPortal MasterPage.Template.xml">
+      <DependentUpon>IFDS.KMPortal MasterPage.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal Webparts\IFDS.KMPortal Webparts.Template.xml">
+      <DependentUpon>IFDS.KMPortal Webparts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal Branding\IFDS.KMPortal Branding.Template.xml">
+      <DependentUpon>IFDS.KMPortal Branding.feature</DependentUpon>
+    </Content>
+    <Content Include="KMPortalPageLayouts\KMPortalDepartmentEnhancedPageLayout.aspx" />
+    <Content Include="KMPortalPageLayouts\KMPortalDepartmentPageLayout.aspx" />
+    <Content Include="KMPortalPageLayouts\KMPortalEnhancedPageLayout.aspx" />
+    <Content Include="KMPortal_Branding\CSS\bootstrap.css" />
+    <Content Include="KMPortal_Branding\CSS\bootstrap.min.css" />
+    <Content Include="KMPortal_Branding\CSS\CustomScrollbar.css" />
+    <Content Include="KMPortal_Branding\CSS\CustomScrollbar.min.css" />
+    <Content Include="KMPortal_Branding\CSS\global.css" />
+    <Content Include="KMPortal_Branding\CSS\global.min.css" />
+    <Content Include="KMPortal_Branding\CSS\jquery-ui.css" />
+    <Content Include="KMPortal_Branding\CSS\mCSB_buttons.png" />
+    <Content Include="KMPortal_Branding\CSS\ui.jqgrid.css" />
+    <Content Include="KMPortal_Branding\Elements.xml" />
+    <Content Include="KMPortal_Branding\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="KMPortal_Branding\Images\a5.jpg" />
+    <Content Include="KMPortal_Branding\Images\animated-overlayNew.gif" />
+    <Content Include="KMPortal_Branding\Images\check_radio.png" />
+    <Content Include="KMPortal_Branding\Images\dwn-aerow.png" />
+    <Content Include="KMPortal_Branding\Images\NewGearIcon.png" />
+    <Content Include="KMPortal_Branding\Images\icons.png" />
+    <Content Include="KMPortal_Branding\Images\KMPortal_Logo.png" />
+    <Content Include="KMPortal_Branding\Images\logo.png" />
+    <Content Include="KMPortal_Branding\Images\mCSB_buttons.png" />
+    <Content Include="KMPortal_Branding\Images\icon_discuss.png" />
+    <Content Include="KMPortal_Branding\Images\icon_faq.png" />
+    <Content Include="KMPortal_Branding\Images\icon_favourite2.png" />
+    <Content Include="KMPortal_Branding\Images\icon_top.png" />
+    <Content Include="KMPortal_Branding\Images\note-icon.png" />
+    <Content Include="KMPortal_Branding\Images\top-icon.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="KMPortal_Branding\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="KMPortal_Branding\Images\ui-icons_222222_256x240.png" />
+    <Content Include="KMPortal_Branding\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="KMPortal_Branding\Images\ui-icons_454545_256x240.png" />
+    <Content Include="KMPortal_Branding\Images\ui-icons_888888_256x240.png" />
+    <Content Include="KMPortal_Branding\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="KMPortal_Branding\JS\app.js" />
+    <Content Include="KMPortal_Branding\JS\app.min.js" />
+    <Content Include="KMPortal_Branding\JS\bootstrap-treeview.js" />
+    <Content Include="KMPortal_Branding\JS\bootstrap-treeview.min.js" />
+    <Content Include="KMPortal_Branding\JS\bootstrap.js" />
+    <Content Include="KMPortal_Branding\JS\bootstrap.min.js" />
+    <Content Include="KMPortal_Branding\JS\grid.locale-en.js" />
+    <Content Include="KMPortal_Branding\JS\jquery-1.11.1.js" />
+    <Content Include="KMPortal_Branding\JS\jquery-ui.js" />
+    <Content Include="KMPortal_Branding\JS\jquery.jqGrid.js" />
+    <Content Include="KMPortal_Branding\JS\jquery.jqGrid.min.js" />
+    <Content Include="KMPortal_Branding\JS\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="KMPortal_Branding\JS\jquery.SPServices2013.01.min.js" />
+    <Content Include="KMPortal_Branding\JS\Notifications.js" />
+    <Content Include="ContentTypes\Best Practices\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\FAQ\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal ContentTypes\IFDS.KMPortal ContentTypes.Template.xml">
+      <DependentUpon>IFDS.KMPortal ContentTypes.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal Lists\IFDS.KMPortal Lists.Template.xml">
+      <DependentUpon>IFDS.KMPortal Lists.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\IFDS.KMPortal BDC_CornerStone\IFDS.KMPortal BDC_CornerStone.Template.xml">
+      <DependentUpon>IFDS.KMPortal BDC_CornerStone.feature</DependentUpon>
+    </Content>
+    <Content Include="KMPortal_DepartmentHomePage\Elements.xml" />
+    <Content Include="KMPortal_DepartmentHomePage\IFDS.aspx" />
+    <Content Include="KMPortal_GlobalHomePage\Elements.xml" />
+    <Content Include="KMPortal_GlobalHomePage\IFDS.aspx" />
+    <Content Include="KMPortal_MasterPage\Elements.xml" />
+    <Content Include="Layouts\IFDS.KMPortal\ViewAllRecentDocs.aspx" />
+    <Content Include="Layouts\IFDS.KMPortal\WebMethodHelper.aspx" />
+    <Content Include="Layouts\IFDS.KMPortal\WebMethodPage.aspx" />
+    <Content Include="Layouts\KM\css\animate.min.css" />
+    <Content Include="Layouts\KM\css\bootstrap.css" />
+    <Content Include="Layouts\KM\css\bootstrap.min.css" />
+    <Content Include="Layouts\KM\css\CustomScrollbar.css" />
+    <Content Include="Layouts\KM\css\CustomScrollbar.min.css" />
+    <Content Include="Layouts\KM\css\dropdownhover.min.css" />
+    <Content Include="Layouts\KM\css\global.css" />
+    <Content Include="Layouts\KM\css\global.min.css" />
+    <Content Include="Layouts\KM\css\jquery-ui.css" />
+    <Content Include="Layouts\KM\css\mCSB_buttons.png" />
+    <Content Include="Layouts\KM\css\ui.jqgrid.css" />
+    <Content Include="Layouts\KM\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layouts\KM\fonts\MyriadPro-Bold.html" />
+    <Content Include="Layouts\KM\fonts\MyriadPro-Bold_gdi.svg" />
+    <Content Include="Layouts\KM\fonts\MyriadPro-Regular.html" />
+    <Content Include="Layouts\KM\fonts\MyriadPro-Regular_gdi.svg" />
+    <Content Include="Layouts\KM\images\a5.jpg" />
+    <Content Include="Layouts\KM\images\aerow-icon.png" />
+    <Content Include="Layouts\KM\images\alert.PNG" />
+    <Content Include="Layouts\KM\images\animated-overlayNew.gif" />
+    <Content Include="Layouts\KM\images\business1.PNG" />
+    <Content Include="Layouts\KM\images\business2.PNG" />
+    <Content Include="Layouts\KM\images\check.PNG" />
+    <Content Include="Layouts\KM\images\check_radio.png" />
+    <Content Include="Layouts\KM\images\cmnt-icon.png" />
+    <Content Include="Layouts\KM\images\cmnt.png" />
+    <Content Include="Layouts\KM\images\copy.PNG" />
+    <Content Include="Layouts\KM\images\delete.PNG" />
+    <Content Include="Layouts\KM\images\dwn-aerow.png" />
+    <Content Include="Layouts\KM\images\edit-con.PNG" />
+    <Content Include="Layouts\KM\images\edit-icon.PNG" />
+    <Content Include="Layouts\KM\images\example_logo.png" />
+    <Content Include="Layouts\KM\images\exel-icon.png" />
+    <Content Include="Layouts\KM\images\exl.PNG" />
+    <Content Include="Layouts\KM\images\faq-icon.png" />
+    <Content Include="Layouts\KM\images\fav-icon.png" />
+    <Content Include="Layouts\KM\images\file.PNG" />
+    <Content Include="Layouts\KM\images\flow.PNG" />
+    <Content Include="Layouts\KM\images\forum-icon.png" />
+    <Content Include="Layouts\KM\images\help-icon.png" />
+    <Content Include="Layouts\KM\images\icons.png" />
+    <Content Include="Layouts\KM\images\icon_announce.png" />
+    <Content Include="Layouts\KM\images\icon_discuss.png" />
+    <Content Include="Layouts\KM\images\icon_faq.png" />
+    <Content Include="Layouts\KM\images\icon_favourite.png" />
+    <Content Include="Layouts\KM\images\icon_favourite2.png" />
+    <Content Include="Layouts\KM\images\icon_top.png" />
+    <Content Include="Layouts\KM\images\ifds-logo.png" />
+    <Content Include="Layouts\KM\images\KMPortal_Logo.png" />
+    <Content Include="Layouts\KM\images\KnowledgeBase.png" />
+    <Content Include="Layouts\KM\images\KnowledgeBase_small.png" />
+    <Content Include="Layouts\KM\images\listview.PNG" />
+    <Content Include="Layouts\KM\images\login.png" />
+    <Content Include="Layouts\KM\images\logo.png" />
+    <Content Include="Layouts\KM\images\logo1.png" />
+    <Content Include="Layouts\KM\images\mbl.png" />
+    <Content Include="Layouts\KM\images\mCSB_buttons.png" />
+    <Content Include="Layouts\KM\images\msg.jpg" />
+    <Content Include="Layouts\KM\images\msg.png" />
+    <Content Include="Layouts\KM\images\news-icon.png" />
+    <Content Include="Layouts\KM\images\new\example_logo.png" />
+    <Content Include="Layouts\KM\images\new\icon_announce.png" />
+    <Content Include="Layouts\KM\images\new\icon_discuss.png" />
+    <Content Include="Layouts\KM\images\new\icon_faq.png" />
+    <Content Include="Layouts\KM\images\new\icon_favourite.png" />
+    <Content Include="Layouts\KM\images\new\icon_favourite2.png" />
+    <Content Include="Layouts\KM\images\new\icon_top.png" />
+    <Content Include="Layouts\KM\images\note-icon.png" />
+    <Content Include="Layouts\KM\images\of.png" />
+    <Content Include="Layouts\KM\images\onn.png" />
+    <Content Include="Layouts\KM\images\p.jpg" />
+    <Content Include="Layouts\KM\images\p.png" />
+    <Content Include="Layouts\KM\images\PacePartner.png" />
+    <Content Include="Layouts\KM\images\PacePartner_small.png" />
+    <Content Include="Layouts\KM\images\pdf-icon.png" />
+    <Content Include="Layouts\KM\images\plus.png" />
+    <Content Include="Layouts\KM\images\prog.png" />
+    <Content Include="Layouts\KM\images\rt-aerow.png" />
+    <Content Include="Layouts\KM\images\s1.jpg" />
+    <Content Include="Layouts\KM\images\s2.jpg" />
+    <Content Include="Layouts\KM\images\s3.jpg" />
+    <Content Include="Layouts\KM\images\ServiceNow.png" />
+    <Content Include="Layouts\KM\images\ServiceNow_small.png" />
+    <Content Include="Layouts\KM\images\share-act.PNG" />
+    <Content Include="Layouts\KM\images\share.PNG" />
+    <Content Include="Layouts\KM\images\tag-icon.png" />
+    <Content Include="Layouts\KM\images\tag.jpg" />
+    <Content Include="Layouts\KM\images\tag.png" />
+    <Content Include="Layouts\KM\images\time-icon.png" />
+    <Content Include="Layouts\KM\images\time.png" />
+    <Content Include="Layouts\KM\images\timeline.PNG" />
+    <Content Include="Layouts\KM\images\top-icon.png" />
+    <Content Include="Layouts\KM\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Layouts\KM\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Layouts\KM\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Layouts\KM\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Layouts\KM\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Layouts\KM\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Layouts\KM\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Layouts\KM\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Layouts\KM\images\ui-icons_222222_256x240.png" />
+    <Content Include="Layouts\KM\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Layouts\KM\images\ui-icons_454545_256x240.png" />
+    <Content Include="Layouts\KM\images\ui-icons_888888_256x240.png" />
+    <Content Include="Layouts\KM\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Layouts\KM\images\user-con.jpg" />
+    <Content Include="Layouts\KM\images\usr-prof.PNG" />
+    <Content Include="Layouts\KM\images\usr.PNG" />
+    <Content Include="Layouts\KM\images\version.PNG" />
+    <Content Include="Layouts\KM\images\wrd.PNG" />
+    <Content Include="Layouts\KM\js\app.js" />
+    <Content Include="Layouts\KM\js\app.min.js" />
+    <Content Include="Layouts\KM\js\bootstrap-treeview.js" />
+    <Content Include="Layouts\KM\js\bootstrap-treeview.min.js" />
+    <Content Include="Layouts\KM\js\bootstrap.js" />
+    <Content Include="Layouts\KM\js\bootstrap.min.js" />
+    <Content Include="Layouts\KM\js\dropdownhover.min.js" />
+    <Content Include="Layouts\KM\js\global.js" />
+    <Content Include="Layouts\KM\js\grid.locale-en.js" />
+    <Content Include="Layouts\KM\js\jquery-1.11.1.js" />
+    <Content Include="Layouts\KM\js\jquery-ui.js" />
+    <Content Include="Layouts\KM\js\jquery.jqGrid.js" />
+    <Content Include="Layouts\KM\js\jquery.jqGrid.min.js" />
+    <Content Include="Layouts\KM\js\jquery.js" />
+    <Content Include="Layouts\KM\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Layouts\KM\js\jquery.nanoscroller.min.js" />
+    <Content Include="Layouts\KM\js\jquery.nicescroll.min.js" />
+    <Content Include="Layouts\KM\js\jquery.SPServices2013.01.min.js" />
+    <Content Include="Layouts\KM\js\Notifications.js" />
+    <Content Include="Layouts\KM\js\vmenuModule.js" />
+    <Content Include="Lists\Best Practices\Best Practices Instance\Elements.xml" />
+    <Content Include="Lists\Best Practices\EditDlg.htm" />
+    <Content Include="Lists\Best Practices\Elements.xml" />
+    <Content Include="Lists\Best Practices\FileDlg.htm" />
+    <Content Include="Lists\Best Practices\Repair.aspx" />
+    <Content Include="Lists\Best Practices\Schema.xml" />
+    <Content Include="Lists\Best Practices\Upload.aspx" />
+    <Content Include="Lists\FAQ\Elements.xml" />
+    <Content Include="Lists\FAQ\FAQInstance\Elements.xml" />
+    <Content Include="Lists\FAQ\Schema.xml" />
+    <Content Include="Lists\Onboarding Documents\EditDlg.htm" />
+    <Content Include="Lists\Onboarding Documents\Elements.xml" />
+    <Content Include="Lists\Onboarding Documents\FileDlg.htm" />
+    <Content Include="Lists\Onboarding Documents\Onboarding Documents Instance\Elements.xml" />
+    <Content Include="Lists\Onboarding Documents\Repair.aspx" />
+    <Content Include="Lists\Onboarding Documents\Schema.xml" />
+    <Content Include="Lists\Onboarding Documents\Upload.aspx" />
+    <Content Include="Lists\Templates\EditDlg.htm" />
+    <Content Include="Lists\Templates\Elements.xml" />
+    <Content Include="Lists\Templates\FileDlg.htm" />
+    <Content Include="Lists\Templates\Repair.aspx" />
+    <Content Include="Lists\Templates\Schema.xml" />
+    <Content Include="Lists\Templates\TemplatesInstance\Elements.xml" />
+    <Content Include="Lists\Templates\Upload.aspx" />
+    <Content Include="SiteColumns\IFDS KMPortal Site Columns\Elements.xml" />
+    <Content Include="IFDSKMPORTAL\default.aspx" />
+    <Content Include="IFDSKMPORTAL\onet.xml" />
+    <Content Include="IFDSKMPORTAL\webtemp_IFDSKMPORTAL.xml" />
+    <Content Include="KMPortalPageLayouts\KMPortalPageLayout.aspx" />
+    <Content Include="KMPortalPageLayouts\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\Onboarding Documents\Elements.xml" />
+    <Content Include="ContentTypes\Templates\Elements.xml" />
+    <Content Include="SQL Scripts\ExternalSystems\IFDSLogs.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\Moxie_Articles.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\Moxie_GlossaryTerms.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\Moxie_SolutionFinders.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\PACEPartner_CourseCatalog.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\ProcessLists.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\ServiceNow_ChangeRequests.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\ServiceNow_Incidents.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\ServiceNow_Problems.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\ServiceNow_Requests.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\TopLearners.sql" />
+    <Content Include="SQL Scripts\ExternalSystems\URLAccessEntries.sql" />
+    <Content Include="SQL Scripts\spTopLearnersSQLJobScheduler.sql" />
+    <Content Include="SQL Scripts\TopLearnersCreateTables.sql" />
+    <Content Include="SQL Scripts\TopLearnersScheduleJobSP.sql" />
+    <Content Include="Webparts\BestPracticesWebPart\BestPracticesWebPartUserControl.ascx" />
+    <Content Include="Webparts\BestPracticesWebPart\Elements.xml" />
+    <Content Include="Webparts\DiscussionListWebPart\DiscussionListWebPartUserControl.ascx" />
+    <Content Include="Webparts\DiscussionListWebPart\Elements.xml" />
+    <Content Include="Webparts\FAQWebPart\Elements.xml" />
+    <Content Include="Webparts\FAQWebPart\FAQWebPartUserControl.ascx" />
+    <Content Include="Webparts\FrequentlyUsedDocsWebPart\Elements.xml" />
+    <Content Include="Webparts\FrequentlyUsedDocsWebPart\FrequentlyUsedDocsWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>FrequentlyUsedDocsWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Webparts\KMPortalMyFavouriteWebPart\Elements.xml" />
+    <Content Include="Webparts\KMPortalMyFavouriteWebPart\KMPortalMyFavouriteWebPartUserControl.ascx" />
+    <Content Include="Webparts\KMPortalSearchBoxWebPart\Elements.xml" />
+    <Content Include="Webparts\KMPortalSearchBoxWebPart\KMPortalSearchBoxWebPartUserControl.ascx" />
+    <Content Include="Webparts\NewsWebpart\Elements.xml" />
+    <Content Include="Webparts\NewsWebpart\NewsWebpartUserControl.ascx" />
+    <Content Include="Webparts\RecentDocumentsWebPart\Elements.xml" />
+    <Content Include="Webparts\RecentDocumentsWebPart\RecentDocumentsWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>RecentDocumentsWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Webparts\TopCandLWebPart\Elements.xml" />
+    <Content Include="Webparts\TopCandLWebPart\TopCandLWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TopCandLWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

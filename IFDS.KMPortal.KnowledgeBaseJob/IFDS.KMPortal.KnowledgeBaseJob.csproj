@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{915E594B-E737-48B0-B2AE-9B698DC3A001}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IFDS.KMPortal.KnowledgeBaseJob</RootNamespace>
+    <AssemblyName>IFDS.KMPortal.KnowledgeBaseJob</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\KnowledgeBaseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleCommentMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleContentMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleInfoMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleInfoProperties.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleRelated.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ArticleResourceMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ATRMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.AttachmentMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.AttachmentMemberFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.CategoryMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.CommunityTagMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ExternalProfileMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.FAQCategoryMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.FAQMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ForumCategoryMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ForumDisplayMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ForumMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.GlossaryItemMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.GlossaryMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.GlossaryTermMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.History.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.KBWorkFlow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.KBWorkFlowStep.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.PortalKBMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.PortalMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.PortalProperties.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.PostMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.PostUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.RatingValueMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.SearchCloudResultMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.SearchParamsList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.SearchTypeMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.SolutionFinderMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.Tag.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.TagMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.Template.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ThreadDisplayMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.ThreadMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.UserMember.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.Wiki.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\IFDS.KMPortal.KnowledgeBaseJob.KnowledgeBaseService.WikiPortalConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService.wsdl" />
+    <None Include="Service References\KnowledgeBaseService\KBService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseService\KBService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\KnowledgeBaseService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KnowledgeBaseService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KnowledgeBaseService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\KnowledgeBaseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
